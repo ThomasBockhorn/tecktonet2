@@ -156,7 +156,7 @@
 					</div>
 					<div class="col-md-4 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay="0.5s">
 						<div class="single-service">
-							<i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+							<i class="fas fa-file" aria-hidden="true"></i>
 							<h3>Web Development</h3>
 							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
 						</div>
@@ -170,7 +170,7 @@
 					</div>
 					<div class="col-md-4 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay="0.7s">
 					<div class="single-service">
-							<i class="fa fa-meetup" aria-hidden="true"></i>
+							<i class="fas fa-code" aria-hidden="true"></i>
 							<h3>Finance Support</h3>
 							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
 						</div>
@@ -184,7 +184,7 @@
 					</div>
 					<div class="col-md-4 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay="0.9s">
 						<div class="single-service">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<i class="fas fa-laptop-code" aria-hidden="true"></i>
 							<h3>Perfect Solution</h3>
 							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
 						</div>
@@ -433,7 +433,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.6s">
 							<!-- Single Fun -->
 							<div class="single-fun">
-								<i class="fa fa-smile-o" aria-hidden="true"></i>
+								<i class="fas fa-project-diagram" aria-hidden="true"></i>
 								<span class="counter">468</span>
 								<p>Happy Clients</p>
 							</div>
@@ -669,12 +669,6 @@
 			</div>	
 		</section>	
 		<!--/ End Pricing Table -->
-		
-		<!-- Map -->
-		<div id="gmap">
-			<div id="map"></div>
-		</div>
-		<!-- End Map -->	
 		
 		<!--/ contact Area -->
 		<section id="contact" class="contact section" data-stellar-background-ratio="0.5">

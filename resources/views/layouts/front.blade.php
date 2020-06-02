@@ -44,7 +44,9 @@
 </head>
 <body>
     <div id="app">
+        @include('components/navbar/navbar')
         @yield('content')
+        @include('components/footer/footer')
     </div>
 
     <script src="{{ asset('js/template_js/jquery.min.js')}}"></script>

@@ -9,12 +9,12 @@
 									<h1 class="cd-headline clip is-full-width">
 										awesome creative
 										<span class="cd-words-wrapper">
-											<b class="is-visible">design</b>
+											<b class="is-visible">website</b>
 											<b>Theme</b>
 											<b>codes</b>
 										</span>
 									</h1>
-									<p>Lorem Ipsum is simply dummy text of the printing and printing and typesetting industry.<br> Lorem Ipsum has been the industry's</p>
+									<p>Building a website can be tricky.  Let's build a website that you can be proud of.</p>
 									<div class="button-head">
 										<div class="button">
 											<span></span>

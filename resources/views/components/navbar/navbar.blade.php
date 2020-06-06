@@ -5,7 +5,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-3 col-sm-4 col-xs-6 logo">
-							<a href="#slider"><img width="100%" height="100%" src="{{ asset('img/tecktonet_logo.png')}}" alt="logo.png"></a>
+							<a href="/"><img width="100%" height="100%" src="{{ asset('img/tecktonet_logo.png')}}" alt="logo.png"></a>
 						</div>
 						<div class="col-md-9 col-sm-8 col-xs-6">
 							<div class="mobile-menu"></div>

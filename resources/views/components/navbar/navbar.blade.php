@@ -4,10 +4,8 @@
 			<div class="header-inner">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-3 col-sm-2 col-xs-2">
-							<div class="logo">
-								<a href="index.html"><img src="{{ asset('img/logo.png')}}" alt="logo.png"></a>
-							</div>
+						<div class="col-md-3 col-sm-2 col-xs-2 logo">
+							<a href="index.html"><img width="125" height="30" src="{{ asset('img/tecktonet_logo.png')}}" alt="logo.png"></a>
 						</div>
 						<div class="col-md-9 col-sm-10">
 							<div class="mobile-menu"></div>

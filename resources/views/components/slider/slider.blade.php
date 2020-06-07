@@ -18,7 +18,7 @@
 									<div class="button-head">
 										<div class="button">
 											<span></span>
-											<a href="#" class="btn">Load More</a>
+											<a href="#features" class="btn">Load More</a>
 										</div>
 									</div>
 								</div>

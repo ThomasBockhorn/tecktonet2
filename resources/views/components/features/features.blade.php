@@ -4,8 +4,8 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="section-title">
-							<h2>Our Feautes</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. </p>
+							<h2>Features of a great website</h2>
+							<p>The best websites have the following characteristics</p>
 						</div>
 					</div>
 				</div>
@@ -20,29 +20,29 @@
 							<div class="single-right">
 								<i class="fas fa-laptop" aria-hidden="true"></i>
 								<div class="right-content">
-									<h3>UX design</h3>
-									<P>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</P>
+									<h3>UX UI design</h3>
+									<P>A great website will be valuable to both consumer and client.  Consumers get what they need quickly.  Clients will get a steady stream of consumers to their site.</P>
 								</div>
 							</div>
 							<div class="single-right">
 								<i class="fa fa-database" aria-hidden="true"></i>
 								<div class="right-content">
-									<h3>UI design</h3>
-									<P>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</P>
+									<h3>Database design</h3>
+									<P>If a website requires a database, the database is simple and easy to maintain.</P>
 								</div>
 							</div>
 							<div class="single-right">
 								<i class="fa fa-cubes" aria-hidden="true"></i>
 								<div class="right-content">
 									<h3>SEO Services</h3>
-									<P>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</P>
+									<P>A great website also needs a great online marketing campaign to draw traffic to a site.  Ads on Facebook is just an example.</P>
 								</div>
 							</div>
 							<div class="single-right">
 								<i class="fa fa-desktop" aria-hidden="true"></i>
 								<div class="right-content">
 									<h3>Web Development</h3>
-									<P>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</P>
+									<P>A great website will be build with a clean, well thought through code base.  That way, a website is easier to maintain over time.</P>
 								</div>
 							</div>
 						</div>

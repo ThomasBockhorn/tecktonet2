@@ -27,7 +27,7 @@
 					<div class="col-md-4 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay="0.6s">
 						<div class="single-service">
 							<i class="fab fa-wordpress-simple" aria-hidden="true"></i>
-							<h3>WordPress custom themes</h3>
+							<h3>WordPress Custom Themes</h3>
 							<p>Tecktonet.com can build WordPress themes if you want a custom solution for your blog or WooCommerce site.  All custom WordPress solutions will be responsive and easy to maintain.</p>
 						</div>
 					</div>

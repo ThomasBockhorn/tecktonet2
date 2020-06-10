@@ -4,8 +4,8 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="section-title">
-							<h2>latest News</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. </p>
+							<h2>Blog</h2>
+							<p>Tecktonet's latest Blog posts</p>
 						</div>
 					</div>
 				</div>

@@ -14,7 +14,8 @@
 							<div class="col-md-8 col-sm-8 col-xs-12">
 								<div class="contact-right">
 									<div class="row">
-										<form class="form" action="#">
+										<form class="form" action="#" method="post">
+											@csrf
 											<div class="col-md-6">
 												<div class="form-group">
 													<input name="name" type="text" placeholder="full name">

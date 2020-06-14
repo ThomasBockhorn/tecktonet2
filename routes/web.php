@@ -17,6 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Contact us route
+Route::post('contact', 'ContactController@saveContact');
+
+//Authorized routes
 Auth::routes();
 
+//Backend route
 Route::get('/home', 'HomeController@index')->name('home');

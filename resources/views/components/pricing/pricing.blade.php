@@ -96,7 +96,7 @@
 							<div class="button-head">
 								<div class="button">
 									<span></span>
-									<a href="#" class="btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i>buy now</a>
+									<a href="#" class="btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Contact Me</a>
 								</div>
 							</div>
 							<!-- Table Bottom -->

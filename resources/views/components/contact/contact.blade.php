@@ -16,6 +16,7 @@
 									<div class="row">
 										<form class="form" action="contact" method="post">
 											@csrf
+											@honeypot
 											<div class="col-md-6">
 												<div class="form-group">
 													<input name="fullname" type="text" placeholder="full name">

@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
+use Spatie\Honeypot\ProtectAgainstSpam;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +20,7 @@ Route::get('/', function () {
 });
 
 //Contact us route
-Route::post('contact', 'ContactController@saveContact');
+Route::post('contact', 'ContactController@saveContact')->middleware(ProtectAgainstSpam::class);
 
 //Authorized routes
 Auth::routes();

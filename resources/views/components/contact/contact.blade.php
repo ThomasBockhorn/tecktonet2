@@ -5,9 +5,9 @@
 						<div class="contact-head">
 							<div class="col-md-4 col-sm-4 col-xs-12">
 								<div class="contact-left">
-									<h3>Contact <span>us now</span></h3>
-									<p class="p1">Aercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
-									<p>Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore et dolore magna aliqua.</p>
+									<h3>Contact <span>me now</span></h3>
+									<p class="p1">Thank you for your interest!  Tecktonet.com is here to help you with your digital presence.  Let's create a website that you can be proud of!.</p>
+									<p>If you are interested, let's discuss how I can help you build a website that will help you achieve your goals.</p>
 									
 								</div>
 							</div>

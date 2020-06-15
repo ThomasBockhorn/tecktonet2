@@ -1,7 +1,7 @@
 <h2>Hello Thomas,</h2>
-You received an email from : {{ $fullname }}
-Here are the details:
-<b>Name:</b> {{ $fullname }}
-<b>Email:</b> {{ $email }}
-<b>Message:</b> {{ $text }}
-Thank You
+You received an email from : {{ $fullname }}<br>
+Here are the details:<br>
+<b>Name:</b> {{ $fullname }}<br>
+<b>Email:</b> {{ $email }}<br>
+<b>Message:</b> {{ $text }}<br>
+Thank You<br>

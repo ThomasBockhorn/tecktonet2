@@ -22,6 +22,9 @@ Route::get('/', function () {
 //Contact us route
 Route::post('contact', 'ContactController@saveContact')->middleware(ProtectAgainstSpam::class);
 
+//Subscription list
+Route::post('subscription', 'Subscription_list_Controller@saveSubscriptionList')->middleware(ProtectAgainstSpam::class);
+
 //Authorized routes
 Auth::routes();
 

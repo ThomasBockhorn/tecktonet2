@@ -25,7 +25,7 @@
 												<li><a href="blog-single.html">Blog Single</a></li>
 											</ul>
 										</li>
-										<li><a href="#team">Team</a></li>
+										<li><a href="#team">About Me</a></li>
 										<li><a href="#contact">Contact</a></li>
 									</ul>
 								</div>

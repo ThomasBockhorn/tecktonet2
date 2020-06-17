@@ -7,11 +7,17 @@
                 <!-- Logo -->
                 <!-- ============================================================== -->
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="/home">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="home">
                         <!-- Logo icon --><b>
                             <!-- Light Logo icon -->
-                            <img width="100%" height="100%" src="{{ asset('img/tecktonet_logo.png')}}" alt="homepage" class="light-logo" />
+                            <img height="25px" width="34px" src="{{ asset('img/tecktonet_icon.png')}}" alt="homepage" class="light-logo" />
                         </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text --><span>
+                         
+                         <!-- Light Logo text -->    
+                         <img height="25px" width="120px" src="{{ asset('img/tecktonet_text.png')}}" class="light-logo" alt="homepage" /></span> </a>
                 </div>
                 <div class="navbar-collapse">
                     <!-- ============================================================== -->

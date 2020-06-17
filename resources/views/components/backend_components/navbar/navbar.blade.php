@@ -18,6 +18,11 @@
                          <!-- Light Logo text -->    
                          <img height="50px" width="200px" src="{{ asset('img/tecktonet_text.png')}}" class="light-logo" alt="homepage" /></span> </a>
                 </div>
+                <ul class="navbar-nav mr-auto mt-md-0">
+                <!-- This is  -->
+                    <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="fas fa-bars"></i></a> </li>
+                </ul>
+                        <!-- ============================================================== -->
                 <div class="navbar-collapse">
                     <ul class="navbar-nav ml-auto my-lg-0">
                         <!-- ============================================================== -->

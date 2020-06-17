@@ -36,7 +36,12 @@
         @include('components/backend_components/navbar/navbar')
         @include('components/backend_components/navbar/sidebar')
         <main class="py-4">
-            @yield('content')
+            <div class="page-wrapper">
+                <div class="container-fluid">
+                    @include('components/backend_components/breadcrumb/breadcrumb')    
+                    @yield('content')
+                </div>
+            </div>
         </main>
     </div>
      <!--<footer class="footer"> © 2017 Material Pro Admin by wrappixel.com </footer>-->
@@ -46,7 +51,7 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
-    <script src="{{ asset('assets/plugins/jquery/jquery.min.js')}}"></script>
+   <script src="{{ asset('assets/plugins/jquery/jquery.min.js')}}"></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="{{ asset('assets/plugins/bootstrap/js/tether.min.js')}}"></script>
     <script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>

@@ -9,16 +9,9 @@
                 <div class="navbar-header">
                     <a class="navbar-brand" href="/home">
                         <!-- Logo icon --><b>
-                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
-                            
                             <!-- Light Logo icon -->
-                            <img src="{{ asset('assets/images/logo-light-icon.png')}}" alt="homepage" class="light-logo" />
+                            <img width="100%" height="100%" src="{{ asset('img/tecktonet_logo.png')}}" alt="homepage" class="light-logo" />
                         </b>
-                        <!--End Logo icon -->
-                        <!-- Logo text --><span>
-                         
-                         <!-- Light Logo text -->    
-                         <img src="{{ asset('assets/images/logo-light-text.png')}}" class="light-logo" alt="homepage" /></span> </a>
                 </div>
                 <div class="navbar-collapse">
                     <!-- ============================================================== -->

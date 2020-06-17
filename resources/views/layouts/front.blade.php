@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="{{ asset('css/template_css/animate.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/template_css/animate-text.css') }}">
     <link rel="stylesheet" href="{{ asset('css/template_css/magnific-popup.css') }}">
-    <!--<link rel="stylesheet" href="{{ asset('css/template_css/font-awesome.min.css') }}">-->
     <script src="https://kit.fontawesome.com/791afc6e4d.js" crossorigin="anonymous"></script>
 
     <!-- Ruby CSS -->

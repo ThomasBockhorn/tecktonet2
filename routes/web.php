@@ -1,8 +1,9 @@
 <?php
-
-use App\Http\Controllers\ContactController;
+use Tabuna\Breadcrumbs\Trail;
 use Illuminate\Support\Facades\Route;
 use Spatie\Honeypot\ProtectAgainstSpam;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,14 +16,13 @@ use Spatie\Honeypot\ProtectAgainstSpam;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route for front end part of the application
+Route::get('/', 'WelcomeController@index');
 
 //Route for backend blog posts
-Route::get('/posts', 'BackEndPostsController@index');
+Route::resource('posts', 'BackEndPostsController');
 
-//Contact us route
+//Contact route and addeds an Antispam protection from Honeypot
 Route::post('contact', 'ContactController@saveContact')->middleware(ProtectAgainstSpam::class);
 
 //Subscription list
@@ -32,4 +32,7 @@ Route::post('subscription', 'Subscription_list_Controller@saveSubscriptionList')
 Auth::routes();
 
 //Backend route
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home')->breadcrumbs( function (Trail $trail) {
+    $trail->push('home', route('home'));
+});
+ 

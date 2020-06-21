@@ -15,7 +15,8 @@
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.0",
-        "spatie/laravel-honeypot": "^2.2"
+        "spatie/laravel-honeypot": "^2.2",
+        "tabuna/breadcrumbs": "^1.1"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

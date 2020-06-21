@@ -19,6 +19,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Route for backend blog posts
+Route::get('/posts', 'BackEndPostsController@index');
+
 //Contact us route
 Route::post('contact', 'ContactController@saveContact')->middleware(ProtectAgainstSpam::class);
 

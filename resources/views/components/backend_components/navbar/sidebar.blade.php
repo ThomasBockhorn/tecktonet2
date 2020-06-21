@@ -9,7 +9,7 @@
                     <ul id="sidebarnav">
                         <li> <a class="waves-effect waves-dark" href="home" aria-expanded="false"><i class="fas fa-tachometer-alt"></i><span class="hide-menu"> Dashboard</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="pages-profile.html" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Profile</span></a>
+                        <li> <a class="waves-effect waves-dark" href="posts" aria-expanded="false"><i class="fas fa-blog"></i><span class="hide-menu">Posts</span></a>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="table-basic.html" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Basic Table</span></a>
                         </li>

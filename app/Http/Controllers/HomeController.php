@@ -23,6 +23,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        //adds title to breadcrumb
+        $title = "Dashboard";
+        
+        return view('home', compact('title'));
     }
 }

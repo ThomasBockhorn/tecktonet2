@@ -12,21 +12,20 @@
 							<nav class="navbar navbar-default">
 								<div class="collapse navbar-collapse">
 									<ul id="nav" class="nav navbar-nav">
-										<li><a href="#Services">Services</a></li>
-										<li><a href="#latest-works">portfolio<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+										<li><a href="/#Services">Services</a></li>
+										<li><a href="/#latest-works">portfolio<i class="fa fa-caret-down" aria-hidden="true"></i></a>
 											<ul class="dropdown">
 												<li><a href="portfolio.html">Portfolio</a></li>
 												<li><a href="portfolio-single.html">portfolio-single</a></li>
 											</ul>
 										</li>
-										<li><a href="#blog">Blogs<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+										<li><a href="/#blog">Blogs<i class="fa fa-caret-down" aria-hidden="true"></i></a>
 											<ul class="dropdown">
-												<li><a href="blog.html">Blog Archive</a></li>
-												<li><a href="blog-single.html">Blog Single</a></li>
+												<li><a href="/blog">Blog</a></li>
 											</ul>
 										</li>
-										<li><a href="#team">About Me</a></li>
-										<li><a href="#contact">Contact</a></li>
+										<li><a href="/#team">About Me</a></li>
+										<li><a href="/#contact">Contact</a></li>
 									</ul>
 								</div>
 							</nav>

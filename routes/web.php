@@ -22,6 +22,9 @@ Route::get('/', 'WelcomeController@index');
 //Route for backend blog posts
 Route::resource('posts', 'BackEndPostsController');
 
+//Route for frontend blog posts
+Route::resource('/blog', 'BlogPostsController');
+
 //Contact route and addeds an Antispam protection from Honeypot
 Route::post('contact', 'ContactController@saveContact')->middleware(ProtectAgainstSpam::class);
 

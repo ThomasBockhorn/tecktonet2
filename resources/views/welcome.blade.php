@@ -22,7 +22,6 @@
 		
 	@include('components/contact/contact')	
 		
-	@include('components/clients/clients')	
-		
+	@include('components/clients/clients')		
 		
 @endsection

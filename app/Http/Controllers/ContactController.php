@@ -38,6 +38,6 @@ class ContactController extends Controller
                }
         );
 
-        return back();
+        return view('Mail-Success');
     }
 }

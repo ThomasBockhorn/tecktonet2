@@ -20,19 +20,6 @@ class Subscription_list_Controller extends Controller
 
         $subscription->save();
 
-        //This sends to my business email address
-        /*\Mail::send('email_notification/email_notification',
-             array(
-                 'fullname' => $request->get('fullname'),
-                 'email' => $request->get('email'),
-                 'text' => $request->get('message'),
-             ), function($email_message) use ($request)
-               {
-                  $email_message->from($request->email);
-                  $email_message->to('thomas.bockhorn@tecktonet.com');
-               }
-        );*/
-
         return back();
     }
 }

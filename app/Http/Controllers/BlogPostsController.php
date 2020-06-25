@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\BlogPost;
 
 class BlogPostsController extends Controller
 {
@@ -13,7 +14,8 @@ class BlogPostsController extends Controller
      */
     public function index()
     {
-        return view('BlogPosts');
+        $posts = BlogPost::orderBy('id', 'desc')->paginate(3);
+        return view('BlogPosts')->with('Blog_Posts', $posts);
     }
 
     /**

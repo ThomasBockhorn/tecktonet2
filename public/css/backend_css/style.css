@@ -2073,10 +2073,10 @@ File: scss
       margin-top: 0px;
       margin-bottom: 0px; }
     .page-titles .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
-      content: "\e649";
-      font-family: themify;
+      /*content: "\f061";*/
+      font-family: "Font Awesome 5 Brands";
       color: #a6b7bf;
-      font-size: 11px; }
+      font-size: 11px;}
     .page-titles .breadcrumb .breadcrumb-item.active {
       color: #99abb4; }
 

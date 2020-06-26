@@ -26,7 +26,8 @@ class BackEndPostsController extends Controller
      */
     public function create()
     {
-        return view('Backend_Post_form');
+        $title = 'Create A Post';
+        return view('Backend_Post_form', compact('title'));
     }
 
     /**

@@ -33,7 +33,7 @@
                             <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Register</a></li>
                         @else
                             <li class="nav-item">
-                                <a class="nav-link" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user" class="profile-pic m-r-10" />{{ Auth::user()->name }}</a>
+                                <a class="nav-link" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->name }}</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('logout') }}"

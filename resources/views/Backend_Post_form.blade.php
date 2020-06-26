@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-backend posts
+backend post form
 @endsection

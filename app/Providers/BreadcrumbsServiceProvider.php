@@ -17,7 +17,15 @@ class BreadcrumbsServiceProvider extends ServiceProvider
     {
         //This creates the home link of blog posts
         Breadcrumbs::for('posts.index', function(Trail $trail){
-            $trail->push('posts', route('home'));
+            $trail
+            ->push('posts', route('posts.index'));
+        });
+
+        //The add post breadcrumb
+        Breadcrumbs::for('posts.create', function(Trail $trail){
+            $trail
+                ->parent('posts.index', route('posts.index'))
+                ->push('Add new Post', route('posts.create'));
         });
     }
 }

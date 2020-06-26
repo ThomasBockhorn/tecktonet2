@@ -7,24 +7,23 @@
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-                        <li> <a class="waves-effect waves-dark" href="home" aria-expanded="false"><i class="fas fa-tachometer-alt"></i><span class="hide-menu"> Dashboard</span></a>
+                        <li> <a class="waves-effect waves-dark" href="/home" aria-expanded="false"><i class="fas fa-tachometer-alt"></i><span class="hide-menu"> Dashboard</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="posts" aria-expanded="false"><i class="fas fa-blog"></i><span class="hide-menu">Posts</span></a>
+                        <li> <a class="waves-effect waves-dark" href="/posts" aria-expanded="false"><i class="fas fa-blog"></i><span class="hide-menu">Posts</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="table-basic.html" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Basic Table</span></a>
+                        <li> <a class="waves-effect waves-dark" href="/posts/create" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Create A Post</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="icon-material.html" aria-expanded="false"><i class="mdi mdi-emoticon"></i><span class="hide-menu">Icons</span></a>
+                        <li> <a class="waves-effect waves-dark" href="icon-material.html" aria-expanded="false"><i class="mdi mdi-emoticon"></i><span class="hide-menu">Projects</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="map-google.html" aria-expanded="false"><i class="mdi mdi-earth"></i><span class="hide-menu">Google Map</span></a>
+                        <li> <a class="waves-effect waves-dark" href="map-google.html" aria-expanded="false"><i class="mdi mdi-earth"></i><span class="hide-menu">Create A Project</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="pages-blank.html" aria-expanded="false"><i class="mdi mdi-book-open-variant"></i><span class="hide-menu">Blank Page</span></a>
+                        <li> <a class="waves-effect waves-dark" href="pages-blank.html" aria-expanded="false"><i class="mdi mdi-book-open-variant"></i><span class="hide-menu">Update Info</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="pages-error-404.html" aria-expanded="false"><i class="mdi mdi-help-circle"></i><span class="hide-menu">Error 404</span></a>
+                        <li> <a class="waves-effect waves-dark" href="pages-error-404.html" aria-expanded="false"><i class="mdi mdi-help-circle"></i><span class="hide-menu">Subscription List</span></a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="pages-error-404.html" aria-expanded="false"><i class="mdi mdi-help-circle"></i><span class="hide-menu">Inquiry List</span></a>
                         </li>
                     </ul>
-                    <div class="text-center m-t-30">
-                        <a href="https://themewagon.com/themes/bootstrap-4-responsive-admin-template/" class="btn waves-effect waves-light btn-warning hidden-md-down">Download Now</a>
-                    </div>
                 </nav>
                 <!-- End Sidebar navigation -->
             </div>

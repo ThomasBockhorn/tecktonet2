@@ -49,7 +49,9 @@ class BackEndPostsController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = BlogPost::findOrFail($id);
+        $title = $post->title;
+        return view('Backend_Post_Show', compact('title'))->with('Blog_Post', $post);
     }
 
     /**
@@ -60,7 +62,7 @@ class BackEndPostsController extends Controller
      */
     public function edit($id)
     {
-        //
+       
     }
 
     /**

@@ -22,7 +22,7 @@
                             <tr>
                                 <td>{{$post->id}}</td>
                                 <td>{{$post->title}}</td>
-                                <td><a class="btn btn-primary" href="">Details</a></td>
+                                <td><a class="btn btn-primary" href="{{ route('posts.show', $post->id) }}">Details</a></td>
                                 <td><a href="" class="btn btn-success">Edit</a></td>
                                 <td><a class="btn btn-danger" href="">Delete</a></td>
                             </tr>

@@ -5,7 +5,7 @@
     <div class="col-12">
         <div class="card">
             <div class="card-block">
-                This is some text within a card block.
+            <textarea class="form-control" id="summary-ckeditor" name="summary-ckeditor"></textarea>
             </div>
         </div>
     </div>

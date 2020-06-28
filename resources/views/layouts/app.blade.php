@@ -76,5 +76,10 @@
     <script src="{{ asset('assets/plugins/c3-master/c3.min.js')}}"></script>
     <!-- Chart JS -->
     <script src="{{ asset('js/dashboard1.js')}}"></script>
+    <!--ckeditor-->
+    <script src="{{ asset('assets/ckeditor/ckeditor.js') }}"></script>
+    <script>
+        CKEDITOR.replace( 'summary-ckeditor' );
+    </script>
 </body>
 </html>

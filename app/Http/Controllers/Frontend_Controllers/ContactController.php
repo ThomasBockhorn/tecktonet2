@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Frontend_Controllers;
 
 use Illuminate\Http\Request;
 use App\Contact;
 use Mail;
+use App\Http\Controllers\Controller;
 
 class ContactController extends Controller
 {
@@ -26,7 +27,7 @@ class ContactController extends Controller
         $contact->save();
 
         //This sends to my business email address
-        \Mail::send('email_notification/email_notification',
+        Mail::send('components/frontend_components/welcome_components/email_notification/email_notification',
              array(
                  'fullname' => $request->get('fullname'),
                  'email' => $request->get('email'),
@@ -38,6 +39,6 @@ class ContactController extends Controller
                }
         );
 
-        return view('Mail-Success');
+        return view('frontend_pages/Mail-Success');
     }
 }

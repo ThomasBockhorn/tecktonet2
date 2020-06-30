@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Backend_Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
 {
@@ -26,6 +27,6 @@ class HomeController extends Controller
         //adds title to breadcrumb
         $title = "Dashboard";
         
-        return view('home', compact('title'));
+        return view('backend_pages/home', compact('title'));
     }
 }

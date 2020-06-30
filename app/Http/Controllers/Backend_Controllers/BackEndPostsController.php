@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Backend_Controllers;
 
 use Illuminate\Http\Request;
 use App\BlogPost;
+use App\Http\Controllers\Controller;
 
 class BackEndPostsController extends Controller
 {
@@ -16,7 +17,7 @@ class BackEndPostsController extends Controller
     {
         $title = 'Blog';
         $posts = BlogPost::orderBy('id', 'desc')->paginate(6);
-        return view('Backend_Posts', compact('title'))->with('Blog_Posts', $posts);;
+        return view('backend_pages/Backend_Posts', compact('title'))->with('Blog_Posts', $posts);;
     }
 
     /**
@@ -27,7 +28,7 @@ class BackEndPostsController extends Controller
     public function create()
     {
         $title = 'Create A Post';
-        return view('Backend_Post_form', compact('title'));
+        return view('backend_pages/Backend_Post_form', compact('title'));
     }
 
     /**
@@ -38,7 +39,23 @@ class BackEndPostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request->title);
+        $this->validate($request, [
+            'title' => 'required|max:255',
+            'author' => 'required'
+        ]);
+
+        $post = new BlogPost();
+        $post->title = $request->title;
+        $post->author = $request->author;
+        $post->text = $request->text;
+        
+        if ($post->save()) {
+            $post->dump();
+            return redirect()->route('post.index');
+        } else {
+            return redirect()->route('post.create');
+        }
     }
 
     /**
@@ -51,7 +68,7 @@ class BackEndPostsController extends Controller
     {
         $post = BlogPost::findOrFail($id);
         $title = $post->title;
-        return view('Backend_Post_Show', compact('title'))->with('Blog_Post', $post);
+        return view('backend_pages/Backend_Post_Show', compact('title'))->with('Blog_Post', $post);
     }
 
     /**

@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Frontend_Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class WelcomeController extends Controller
 {
@@ -13,6 +14,6 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        return view('welcome');
+        return view('frontend_pages/welcome');
     }
 }

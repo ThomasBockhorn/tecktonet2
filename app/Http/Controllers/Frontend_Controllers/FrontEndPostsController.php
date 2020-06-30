@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Frontend_Controllers;
 
 use Illuminate\Http\Request;
 use App\BlogPost;
+use App\Http\Controllers\Controller;
 
-class BlogPostsController extends Controller
+class FrontEndPostsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +16,7 @@ class BlogPostsController extends Controller
     public function index()
     {
         $posts = BlogPost::orderBy('id', 'desc')->paginate(3);
-        return view('BlogPosts')->with('Blog_Posts', $posts);
+        return view('frontend_pages/BlogPosts')->with('Blog_Posts', $posts);
     }
 
     /**

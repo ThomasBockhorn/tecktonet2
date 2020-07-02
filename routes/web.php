@@ -20,16 +20,16 @@ use Spatie\Honeypot\ProtectAgainstSpam;
 Route::get('/', 'Frontend_Controllers\WelcomeController@index');
 
 //Route for backend blog posts
-Route::resource('posts', 'Backend_Controllers\BackEndPostsController');
+Route::resource('/posts', 'Backend_Controllers\BackEndPostsController')->middleware(ProtectAgainstSpam::class);
 
 //Route for frontend blog posts
-Route::resource('/blog', 'Frontend_Controllers\FrontEndPostsController');
+Route::resource('/blog', 'Frontend_Controllers\FrontEndPostsController')->except(['create', 'update', 'store', 'destroy', 'edit']);
 
 //Contact route and addeds an Antispam protection from Honeypot
-Route::post('contact', 'Frontend_Controllers\ContactController@saveContact')->middleware(ProtectAgainstSpam::class);
+Route::post('/contact', 'Frontend_Controllers\ContactController@saveContact')->middleware(ProtectAgainstSpam::class);
 
 //Subscription list
-Route::post('subscription', 'Frontend_Controllers\Subscription_list_Controller@saveSubscriptionList')->middleware(ProtectAgainstSpam::class);
+Route::post('/subscription', 'Frontend_Controllers\Subscription_list_Controller@saveSubscriptionList')->middleware(ProtectAgainstSpam::class);
 
 //Authorized routes
 Auth::routes();

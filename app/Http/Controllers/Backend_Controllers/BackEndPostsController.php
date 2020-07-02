@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 
 class BackEndPostsController extends Controller
 {
+      
     /**
      * Display a listing of the resource.
      *
@@ -36,25 +37,24 @@ class BackEndPostsController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
-     */
+     **/
     public function store(Request $request)
-    {
-        dd($request->title);
+    {   
         $this->validate($request, [
             'title' => 'required|max:255',
-            'author' => 'required'
+            'author' => 'required',
+            'text' => 'required'
         ]);
 
-        $post = new BlogPost();
+        $post = new BlogPost;
         $post->title = $request->title;
         $post->author = $request->author;
         $post->text = $request->text;
         
         if ($post->save()) {
-            $post->dump();
-            return redirect()->route('post.index');
+            return redirect()->route('posts.index');
         } else {
-            return redirect()->route('post.create');
+            return redirect()->route('posts.index')->with('errors', 'something bad happened!');
         }
     }
 

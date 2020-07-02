@@ -7,7 +7,7 @@
                 <!-- Logo -->
                 <!-- ============================================================== -->
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="home">
+                    <a class="navbar-brand" href="{{ url('/home') }}">
                         <!-- Logo icon --><b>
                             <!-- Light Logo icon -->
                             <img height="50px" width="50px" src="{{ asset('img/tecktonet_icon.png')}}" alt="homepage" class="light-logo" />

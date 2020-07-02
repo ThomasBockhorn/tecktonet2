@@ -12,6 +12,6 @@ class BlogPost extends Model
      * @var array
      */
     protected $fillable = [
-        'title', 'author', 'text', 'rating', 'tags', 'created_at'
+        'title', 'author', 'text'
     ];
 }

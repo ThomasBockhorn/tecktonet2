@@ -29,6 +29,9 @@
                             @endforeach
                         </tbody>
                     </table>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
                 </div>
             </div>
         </div>

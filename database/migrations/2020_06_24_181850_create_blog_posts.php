@@ -18,8 +18,6 @@ class CreateBlogPosts extends Migration
             $table->string('title');
             $table->string('author');
             $table->text('text');
-            $table->integer('rating');
-            $table->json('tags');
             $table->timestamps();
         });
     }

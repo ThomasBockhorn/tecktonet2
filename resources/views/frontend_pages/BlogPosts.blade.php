@@ -15,9 +15,8 @@
 								<h3 class="date">{{ $post->created_at->format('d') }}<span>{{$post->created_at->format('M') }}</span></h3>
 								<h2><a href="#">{{ $post->title }}</a></h2>
 								<div class="title"><span class="user"><i class="fa fa-user" aria-hidden="true"></i>{{ $post->author }}</span> <span class="comment"><i class="fa fa-comment-o" aria-hidden="true"></i>no comment</span></div>
-								<p>{{ $post-> text }}</p>
-								<p>Lorem ipsum dolor a sit ameti, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et Lorem ipsum dolor a sit ameti, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et Lorem ipsum dolor a sit ameti, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et Lorem ipsum dolor a sit ameti, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et Lorem ipsum dolor a sit ameti, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et  </p>
-								<a href="#" class="btn">Read More<i class="fa fa-caret-right" aria-hidden="true"></i></a>
+								{!! $post-> text !!}
+								<a href="{{ route('blog.show', $post->id) }}" class="btn">Read More<i class="fa fa-caret-right" aria-hidden="true"></i></a>
 								<h5 class="tags">tags-
 									<li><a href="#">html,</a></li>
 									<li><a href="#">Bootstrap,</a></li>

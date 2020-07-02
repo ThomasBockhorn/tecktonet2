@@ -27,6 +27,7 @@ class FrontEndPostsController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = BlogPost::findOrFail($id);
+        return view('frontend_pages/SinglePost')->with('Blog_Post', $post);
     }
 }

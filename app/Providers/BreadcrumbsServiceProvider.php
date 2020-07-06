@@ -16,7 +16,10 @@ class BreadcrumbsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //This creates the home link of blog posts
+        /**
+         * Breadcrumbs for backend posts
+         */
+        //This creates the home link of blog posts 
         Breadcrumbs::for('posts.index', function(Trail $trail){
             $trail
             ->push('Posts', route('posts.index'));
@@ -35,6 +38,19 @@ class BreadcrumbsServiceProvider extends ServiceProvider
             $trail
             ->parent('posts.index', route('posts.index'))
             ->push($post->title);
+        });
+
+        /**
+         * Breadcrumbs for frontend blog posts
+         */
+        Breadcrumbs::for('blog.index', function(Trail $trail){
+            $trail->push('Blog', route('blog.index'));
+        });
+
+        Breadcrumbs::for('blog.show', function(Trail $trail, $id){
+            $post = BlogPost::findOrFail($id);
+            $trail->parent('blog.index', route('blog.index'))
+                ->push($post->title);
         });
     }
 }

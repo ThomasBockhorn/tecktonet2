@@ -1,6 +1,7 @@
 @extends('layouts.front')
 
 @section('content')
+@include('components/frontend_components/common_components/breadcrumb/breadcrumb')
 		<!-- Blog -->
 		<section id="blog-single" class="section">
 			<div class="container">

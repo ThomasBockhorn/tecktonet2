@@ -15,8 +15,9 @@ class FrontEndPostsController extends Controller
      */
     public function index()
     {
+        $title = 'Blog';
         $posts = BlogPost::orderBy('id', 'desc')->paginate(3);
-        return view('frontend_pages/BlogPosts')->with('Blog_Posts', $posts);
+        return view('frontend_pages/BlogPosts', compact('title'))->with('Blog_Posts', $posts);
     }
 
     /**
@@ -28,6 +29,7 @@ class FrontEndPostsController extends Controller
     public function show($id)
     {
         $post = BlogPost::findOrFail($id);
-        return view('frontend_pages/SinglePost')->with('Blog_Post', $post);
+        $title = $post->title;
+        return view('frontend_pages/SinglePost', compact('title'))->with('Blog_Post', $post);
     }
 }

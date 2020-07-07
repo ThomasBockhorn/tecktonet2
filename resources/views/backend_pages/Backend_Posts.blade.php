@@ -22,7 +22,7 @@
                             <tr>
                                 <td>{{$post->id}}</td>
                                 <td>{{$post->title}}</td>
-                                <td><a class="btn btn-primary" href="{{ route('posts.show', $post->id) }}">Details</a></td>
+                                <td><a class="btn btn-primary" href="{{ route('posts.show', $post->id) }}"><i class="fas fa-info-circle"></i> Details</a></td>
                                 <td><a href="{{ route('posts.edit', $post->id) }}" class="btn btn-success"><i class="fas fa-edit"></i> Edit</a></td>
                                 <td>
                                     <form action="{{ route('posts.destroy', $post->id) }}" method="POST">

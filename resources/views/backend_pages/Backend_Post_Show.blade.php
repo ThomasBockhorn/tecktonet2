@@ -14,13 +14,19 @@
                 {!! $Blog_Post->text !!}
                 </div>
                 <hr>
-                <div>
-                    <a href="{{ route('posts.edit', $Blog_Post->id) }}" class="btn btn-primary">Edit</a>
-                    <form action="{{ route('posts.destroy', $Blog_Post->id) }}" method="POST">
-                        @method(" DELETE")    
-                        @csrf
-                        <button type="submit" class="btn btn-danger">Delete</button>
-                    </form>
+                <div class="container">
+                    <div class="row">
+                        <div class="m-2">
+                            <a href="{{ route('posts.edit', $Blog_Post->id) }}" class="btn btn-success"><i class="fas fa-edit"></i> Edit</a>
+                        </div>
+                        <div class="m-2">
+                            <form action="{{ route('posts.destroy', $Blog_Post->id) }}" method="POST">
+                                @method(" DELETE")    
+                                @csrf
+                                <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete</button>
+                             </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

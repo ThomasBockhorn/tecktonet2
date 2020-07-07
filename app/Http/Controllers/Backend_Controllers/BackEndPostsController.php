@@ -79,7 +79,9 @@ class BackEndPostsController extends Controller
      */
     public function edit($id)
     {
-       
+        $post = BlogPost::findOrFail($id);
+        $title = 'Edit';
+        return view('backend_pages/Backend_Post_edit', compact('title'))->with('Blog_Post', $post);
     }
 
     /**
@@ -91,7 +93,22 @@ class BackEndPostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required|max:255',
+            'author' => 'required',
+            'text' => 'required'
+        ]);
+
+        $post =  BlogPost::findOrFail($id);
+        $post->title = $request->title;
+        $post->author = $request->author;
+        $post->text = $request->text;
+        
+        if ($post->update()) {
+            return redirect()->route('posts.index');
+        } else {
+            return redirect()->route('posts.index')->with('errors', 'something bad happened!');
+        }
     }
 
     /**
@@ -102,6 +119,8 @@ class BackEndPostsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = BlogPost::findOrFail($id);
+        $post->delete();
+        return redirect()->route('posts.index');
     }
 }

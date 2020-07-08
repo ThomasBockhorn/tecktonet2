@@ -22,13 +22,16 @@
                             <tr>
                                 <td>{{$post->id}}</td>
                                 <td>{{$post->title}}</td>
-                                <td><a class="btn btn-primary" href="{{ route('posts.show', $post->id) }}"><i class="fas fa-info-circle"></i> Details</a></td>
-                                <td><a href="{{ route('posts.edit', $post->id) }}" class="btn btn-success"><i class="fas fa-edit"></i> Edit</a></td>
+                                <td><a class="btn btn-primary" href="{{ route('posts.show', $post->id) }}"><i
+                                            class="fas fa-info-circle"></i> Details</a></td>
+                                <td><a href="{{ route('posts.edit', $post->id) }}" class="btn btn-success"><i
+                                            class="fas fa-edit"></i> Edit</a></td>
                                 <td>
                                     <form action="{{ route('posts.destroy', $post->id) }}" method="POST">
-                                        @method(" DELETE")    
+                                        @method(" DELETE")
                                         @csrf
-                                       <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete</button>
+                                        <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i>
+                                            Delete</button>
                                     </form>
                                 </td>
                             </tr>

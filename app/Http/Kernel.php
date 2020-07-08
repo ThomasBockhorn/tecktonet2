@@ -43,6 +43,12 @@ class Kernel extends HttpKernel
             'throttle:60,1',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
+
+        'rules' => [
+            \Spatie\Honeypot\ProtectAgainstSpam::class,
+            \App\Http\Middleware\Authenticate::class,
+            \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class
+        ]
     ];
 
     /**

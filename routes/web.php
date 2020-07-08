@@ -1,4 +1,5 @@
 <?php
+
 use Tabuna\Breadcrumbs\Trail;
 use Illuminate\Support\Facades\Route;
 use Spatie\Honeypot\ProtectAgainstSpam;
@@ -16,11 +17,16 @@ use Spatie\Honeypot\ProtectAgainstSpam;
 |
 */
 
+//Backend routes
+Route::group(['middleware' => ['rules']], function () {
+    Route::resource('/posts', 'Backend_Controllers\BackEndPostsController');
+    Route::get('/home', 'Backend_Controllers\HomeController@index')->name('home')->breadcrumbs(function (Trail $trail) {
+        $trail->push('home', route('home'));
+    });
+});
+
 //Route for front end part of the application
 Route::get('/', 'Frontend_Controllers\WelcomeController@index');
-
-//Route for backend blog posts
-Route::resource('/posts', 'Backend_Controllers\BackEndPostsController')->middleware(ProtectAgainstSpam::class);
 
 //Route for frontend blog posts
 Route::resource('/blog', 'Frontend_Controllers\FrontEndPostsController')->except(['create', 'update', 'store', 'destroy', 'edit']);
@@ -33,9 +39,3 @@ Route::post('/subscription', 'Frontend_Controllers\Subscription_list_Controller@
 
 //Authorized routes
 Auth::routes();
-
-//Backend route
-Route::get('/home', 'Backend_Controllers\HomeController@index')->name('home')->breadcrumbs( function (Trail $trail) {
-    $trail->push('home', route('home'));
-});
- 

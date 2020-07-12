@@ -5,10 +5,12 @@ namespace App\Http\Controllers\Backend_Controllers;
 use Illuminate\Http\Request;
 use App\BlogPost;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Backend_Controllers\ImageController;
+use App\Image;
 
 class BackEndPostsController extends Controller
 {
-      
+
     /**
      * Display a listing of the resource.
      *
@@ -39,7 +41,7 @@ class BackEndPostsController extends Controller
      * @return \Illuminate\Http\Response
      **/
     public function store(Request $request)
-    {   
+    {
         $this->validate($request, [
             'title' => 'required|max:255',
             'author' => 'required',
@@ -50,8 +52,12 @@ class BackEndPostsController extends Controller
         $post->title = $request->title;
         $post->author = $request->author;
         $post->text = $request->text;
-        
+
         if ($post->save()) {
+            //Adds file name to database
+            $image = new ImageController;
+            $image->store($request, $post->id);
+
             return redirect()->route('posts.index');
         } else {
             return redirect()->route('posts.index')->with('errors', 'something bad happened!');
@@ -103,7 +109,7 @@ class BackEndPostsController extends Controller
         $post->title = $request->title;
         $post->author = $request->author;
         $post->text = $request->text;
-        
+
         if ($post->update()) {
             return redirect()->route('posts.index');
         } else {

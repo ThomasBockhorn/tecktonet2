@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend_Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Image;
+use Illuminate\Support\Facades\Storage;
 
 class ImageController extends Controller
 {
@@ -25,7 +26,7 @@ class ImageController extends Controller
         $image = new Image;
 
         if ($request->hasFile('image')) {
-            $image->image = $request->file('image');
+            $image->image = $request->file('image')->store('img', 'public');
             $image->post_id = $post_id;
             $image->save();
         }

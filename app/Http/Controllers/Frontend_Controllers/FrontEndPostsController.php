@@ -19,8 +19,11 @@ class FrontEndPostsController extends Controller
     {
         $title = 'Blog';
         $posts = BlogPost::orderBy('id', 'desc')->paginate(3);
+        $images = Image::orderBy('id', 'desc')->paginate(3);
+
         return view('frontend_pages/BlogPosts', compact('title'))
-            ->with('Blog_Posts', $posts);
+            ->with('Blog_Posts', $posts)
+            ->with('Images', $images);
     }
 
     /**

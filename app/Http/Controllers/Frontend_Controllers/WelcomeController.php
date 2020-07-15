@@ -5,10 +5,11 @@ namespace App\Http\Controllers\Frontend_Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\BlogPost;
+use App\Image;
 
 class WelcomeController extends Controller
 {
-     /**
+    /**
      * Show the frontend part of the application.
      *
      * @return \Illuminate\Contracts\Support\Renderable
@@ -16,6 +17,10 @@ class WelcomeController extends Controller
     public function index()
     {
         $posts = BlogPost::orderBy('id', 'desc')->paginate(3);
-        return view('frontend_pages/welcome')->with('Blog_Posts', $posts);
+        $images = Image::orderBy('id', 'desc')->paginate(3);
+
+        return view('frontend_pages/welcome')
+            ->with('Blog_Posts', $posts)
+            ->with('Images', $images);
     }
 }

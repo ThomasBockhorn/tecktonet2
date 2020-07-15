@@ -8,7 +8,7 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="single-news">
                     <div class="news-head">
-                        <img src="img/single-b1.jpg" alt="#">
+                        <img src="{{ asset('storage/'.$Image->image) }}" alt="#">
                     </div>
                     <div class="news-body">
                         <h3 class="date">

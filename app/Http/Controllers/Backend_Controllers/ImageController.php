@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Backend_Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Image;
-use Facade\FlareClient\Stacktrace\File;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
@@ -65,7 +64,7 @@ class ImageController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $post_id
-     * @return \Illuminate\Http\Response
+     * 
      */
     public function delete($post_id)
     {

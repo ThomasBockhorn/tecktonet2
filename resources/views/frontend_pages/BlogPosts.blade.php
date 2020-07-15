@@ -10,7 +10,7 @@
             <div class="col-md-12 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.4s">
                 <div class="single-news">
                     <div class="news-head">
-                        <img src="img/blog1.jpg" alt="#">
+                        <img src="" alt="">
                     </div>
                     <div class="news-body">
                         <h3 class="date">

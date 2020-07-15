@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Frontend_Controllers;
 
-use Illuminate\Http\Request;
 use App\BlogPost;
 use App\Http\Controllers\Controller;
+use App\Image;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Backend_Controllers\ImageController;
 
 class FrontEndPostsController extends Controller
 {
@@ -17,7 +19,8 @@ class FrontEndPostsController extends Controller
     {
         $title = 'Blog';
         $posts = BlogPost::orderBy('id', 'desc')->paginate(3);
-        return view('frontend_pages/BlogPosts', compact('title'))->with('Blog_Posts', $posts);
+        return view('frontend_pages/BlogPosts', compact('title'))
+            ->with('Blog_Posts', $posts);
     }
 
     /**
@@ -30,6 +33,15 @@ class FrontEndPostsController extends Controller
     {
         $post = BlogPost::findOrFail($id);
         $title = $post->title;
-        return view('frontend_pages/SinglePost', compact('title'))->with('Blog_Post', $post);
+
+        //find the image_id, returns a integer
+        $image_id = DB::table('images')->where('post_id', '=', $post->id)->first();
+
+        //Get the Image object of that id
+        $image = Image::findOrFail($image_id->id);
+
+        return view('frontend_pages/SinglePost', compact('title'))
+            ->with('Blog_Post', $post)
+            ->with('Image', $image);
     }
 }

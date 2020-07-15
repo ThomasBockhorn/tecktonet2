@@ -11,6 +11,14 @@ use App\Image;
 class BackEndPostsController extends Controller
 {
 
+    //access to image controller
+    private $image;
+
+    public function __construct()
+    {
+        $this->image = new ImageController;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -55,8 +63,7 @@ class BackEndPostsController extends Controller
 
         if ($post->save()) {
             //Adds file name to database
-            $image = new ImageController;
-            $image->store($request, $post->id);
+            $this->image->store($request, $post->id);
 
             return redirect()->route('posts.index');
         } else {
@@ -111,6 +118,9 @@ class BackEndPostsController extends Controller
         $post->text = $request->text;
 
         if ($post->update()) {
+            //updates file name to database
+            $this->image->store($request, $post->id);
+
             return redirect()->route('posts.index');
         } else {
             return redirect()->route('posts.index')->with('errors', 'something bad happened!');
@@ -126,7 +136,12 @@ class BackEndPostsController extends Controller
     public function destroy($id)
     {
         $post = BlogPost::findOrFail($id);
+
+        //deletes file name to database
+        $this->image->delete($post->id);
+
         $post->delete();
+
         return redirect()->route('posts.index');
     }
 }

@@ -7,6 +7,7 @@ use App\BlogPost;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Backend_Controllers\ImageController;
 use App\Image;
+use Illuminate\Support\Facades\DB;
 
 class BackEndPostsController extends Controller
 {
@@ -81,7 +82,16 @@ class BackEndPostsController extends Controller
     {
         $post = BlogPost::findOrFail($id);
         $title = $post->title;
-        return view('backend_pages/Backend_Post_Show', compact('title'))->with('Blog_Post', $post);
+
+        //Getting image from database
+        $image_id = DB::table('images')->where('post_id', '=', $id)->first();
+
+        //Get the Image object of that id
+        $image = Image::findOrFail($image_id->id);
+
+        return view('backend_pages/Backend_Post_Show', compact('title'))
+            ->with('Blog_Post', $post)   //blog info
+            ->with('Image', $image);     //image data
     }
 
     /**

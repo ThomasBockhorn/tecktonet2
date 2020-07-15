@@ -129,6 +129,7 @@ class BackEndPostsController extends Controller
 
         if ($post->update()) {
             //updates file name to database
+            $this->image->delete($post->id);
             $this->image->store($request, $post->id);
 
             return redirect()->route('posts.index');

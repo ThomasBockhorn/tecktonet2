@@ -23,6 +23,7 @@ Route::group(['middleware' => ['rules']], function () {
     Route::get('/home', 'Backend_Controllers\HomeController@index')->name('home')->breadcrumbs(function (Trail $trail) {
         $trail->push('home', route('home'));
     });
+    Route::resource('/projects', 'Backend_Controllers\ProjectsController');
 });
 
 //Route for front end part of the application
@@ -30,6 +31,9 @@ Route::get('/', 'Frontend_Controllers\WelcomeController@index');
 
 //Route for frontend blog posts
 Route::resource('/blog', 'Frontend_Controllers\FrontEndPostsController')->except(['create', 'update', 'store', 'destroy', 'edit']);
+
+//Route for frontend projects
+Route::resource('/projects', 'Frontend_Controllers\FrontendProjectsController')->except(['create', 'update', 'store', 'destroy', 'edit']);
 
 //Contact route and addeds an Antispam protection from Honeypot
 Route::post('/contact', 'Frontend_Controllers\ContactController@saveContact')->middleware(ProtectAgainstSpam::class);

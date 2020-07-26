@@ -6,7 +6,6 @@ use App\BlogPost;
 use App\Http\Controllers\Controller;
 use App\Image;
 use Illuminate\Support\Facades\DB;
-use App\Http\Controllers\Backend_Controllers\ImageController;
 
 class FrontEndPostsController extends Controller
 {

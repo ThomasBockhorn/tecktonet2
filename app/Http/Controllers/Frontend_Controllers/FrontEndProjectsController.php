@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Frontend_Controllers;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Project;
 
 class FrontEndProjectsController extends Controller
 {
@@ -14,7 +14,8 @@ class FrontEndProjectsController extends Controller
      */
     public function index()
     {
-        //
+        $projects = Project::orderBy('id', 'desc')->paginate(6);
+        return view('frontend_pages/Projects')->with('Projects', $projects);
     }
 
     /**

@@ -59,5 +59,12 @@ class BreadcrumbsServiceProvider extends ServiceProvider
         BreadCrumbs::for('projects.index', function (Trail $trail) {
             $trail->push('Projects', route('projects.index'));
         });
+
+        /**
+         * Breadcrumbs for frontend portfolio
+         */
+        BreadCrumbs::for('portfolio.index', function (Trail $trail) {
+            $trail->push('Portfolio', route('portfolio.index'));
+        });
     }
 }

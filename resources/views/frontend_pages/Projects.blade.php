@@ -1,6 +1,7 @@
 @extends('layouts.front')
 
 @section('content')
+@include('components/frontend_components/common_components/breadcrumb/breadcrumb')
 <section id="latest-works" class="latest-works section">
     <div class="container">
         <div class="row">

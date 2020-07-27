@@ -68,7 +68,18 @@ class BackEndProjectsController extends Controller
      */
     public function show($id)
     {
-        //
+        $project = Project::findOrFail($id);
+        $title = $project->title;
+
+        //Getting image from database
+        //$image_id = DB::table('images')->where('post_id', '=', $id)->first();
+
+        //Get the Image object of that id
+        //$image = Image::findOrFail($image_id->id);
+
+        return view('backend_pages/Backend_Projects_Show', compact('title'))
+            ->with('Project', $project);   //blog info
+        // ->with('Image', $image);     //image data
     }
 
     /**

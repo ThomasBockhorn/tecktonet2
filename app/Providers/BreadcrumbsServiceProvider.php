@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Tabuna\Breadcrumbs\Breadcrumbs;
 use Tabuna\Breadcrumbs\Trail;
 use App\BlogPost;
+use App\Project;
 
 class BreadcrumbsServiceProvider extends ServiceProvider
 {
@@ -58,6 +59,14 @@ class BreadcrumbsServiceProvider extends ServiceProvider
          */
         BreadCrumbs::for('projects.index', function (Trail $trail) {
             $trail->push('Projects', route('projects.index'));
+        });
+
+        //This creates the home link of projects
+        Breadcrumbs::for('projects.show', function (Trail $trail,  $id) {
+            $project = Project::findOrFail($id);
+            $trail
+                ->parent('projects.index', route('projects.index'))
+                ->push($project->title);
         });
 
         //The add post breadcrumb

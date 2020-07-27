@@ -90,7 +90,9 @@ class BackEndProjectsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $project = Project::findOrFail($id);
+        $title = 'Edit';
+        return view('backend_pages/Backend_Projects_edit', compact('title'))->with('Project', $project);
     }
 
     /**
@@ -102,7 +104,26 @@ class BackEndProjectsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required|max:255',
+            'customer' => 'required',
+            'description' => 'required'
+        ]);
+
+        $project =  Project::findOrFail($id);
+        $project->title = $request->title;
+        $project->customer = $request->customer;
+        $project->description = $request->description;
+
+        if ($project->update()) {
+            //updates file name to database
+            //$this->image->delete($project->id);
+            //$this->image->store($request, $project->id);
+
+            return redirect()->route('projects.index');
+        } else {
+            return redirect()->route('projects.index')->with('errors', 'something bad happened!');
+        }
     }
 
     /**

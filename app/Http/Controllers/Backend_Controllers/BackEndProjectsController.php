@@ -134,6 +134,13 @@ class BackEndProjectsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $project = Project::findOrFail($id);
+
+        //deletes file name to database
+        //$this->image->delete($post->id);
+
+        $project->delete();
+
+        return redirect()->route('projects.index');
     }
 }

@@ -16,7 +16,7 @@
                  <li> <a class="waves-effect waves-dark" href="/posts/create" aria-expanded="false"><i
                              class="fas fa-plus"></i><span class="hide-menu">Create A Post</span></a>
                  </li>
-                 <li> <a class="waves-effect waves-dark" href="icon-material.html" aria-expanded="false"><i
+                 <li> <a class="waves-effect waves-dark" href="/projects" aria-expanded="false"><i
                              class="mdi mdi-emoticon"></i><span class="hide-menu">Projects</span></a>
                  </li>
                  <li> <a class="waves-effect waves-dark" href="map-google.html" aria-expanded="false"><i

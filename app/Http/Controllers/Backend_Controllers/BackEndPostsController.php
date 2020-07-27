@@ -29,7 +29,7 @@ class BackEndPostsController extends Controller
     {
         $title = 'Blog';
         $posts = BlogPost::orderBy('id', 'desc')->paginate(6);
-        return view('backend_pages/Backend_Posts', compact('title'))->with('Blog_Posts', $posts);;
+        return view('backend_pages/Backend_Posts', compact('title'))->with('Blog_Posts', $posts);
     }
 
     /**

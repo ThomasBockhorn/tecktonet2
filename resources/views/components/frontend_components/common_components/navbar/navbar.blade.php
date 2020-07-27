@@ -17,7 +17,7 @@
                                 <li><a href="/#latest-works">portfolio<i class="fa fa-caret-down"
                                             aria-hidden="true"></i></a>
                                     <ul class="dropdown">
-                                        <li><a href="/projects">Portfolio</a></li>
+                                        <li><a href="/portfolio">Portfolio</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="/#blog">Blogs<i class="fa fa-caret-down" aria-hidden="true"></i></a>

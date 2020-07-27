@@ -124,7 +124,7 @@
                 <div class="button-head">
                     <div class="button">
                         <span></span>
-                        <a href="/projects" class="btn">Load More</a>
+                        <a href="/portfolio" class="btn">Load More</a>
                     </div>
                 </div>
             </div>

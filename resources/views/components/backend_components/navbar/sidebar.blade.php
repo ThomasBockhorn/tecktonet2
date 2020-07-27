@@ -17,10 +17,10 @@
                              class="fas fa-plus"></i><span class="hide-menu">Create A Post</span></a>
                  </li>
                  <li> <a class="waves-effect waves-dark" href="/projects" aria-expanded="false"><i
-                             class="mdi mdi-emoticon"></i><span class="hide-menu">Projects</span></a>
+                             class="fas fa-project-diagram"></i><span class="hide-menu">Projects</span></a>
                  </li>
                  <li> <a class="waves-effect waves-dark" href="/projects/create" aria-expanded="false"><i
-                             class="mdi mdi-earth"></i><span class="hide-menu">Create A Project</span></a>
+                             class="fas fa-folder-plus"></i><span class="hide-menu">Create A Project</span></a>
                  </li>
                  <li> <a class="waves-effect waves-dark" href="pages-blank.html" aria-expanded="false"><i
                              class="mdi mdi-book-open-variant"></i><span class="hide-menu">Update Info</span></a>

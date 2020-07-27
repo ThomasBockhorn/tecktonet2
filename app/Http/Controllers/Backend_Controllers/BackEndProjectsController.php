@@ -39,7 +39,25 @@ class BackEndProjectsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required|max:255',
+            'customer' => 'required',
+            'description' => 'required'
+        ]);
+
+        $project = new Project;
+        $project->title = $request->title;
+        $project->customer = $request->customer;
+        $project->description = $request->description;
+
+        if ($project->save()) {
+            //Adds file name to database
+            //$this->image->store($request, $post->id);
+
+            return redirect()->route('projects.index');
+        } else {
+            return redirect()->route('projects.index')->with('errors', 'something bad happened!');
+        }
     }
 
     /**

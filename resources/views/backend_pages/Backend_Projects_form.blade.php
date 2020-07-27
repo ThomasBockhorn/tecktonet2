@@ -12,10 +12,10 @@
                         <input class="form-control" type="text" value="title" name="title">
                     </div>
                     <div class="form-group">
-                        <input class="form-control" type="text" value="Thomas Bockhorn" name="author">
+                        <input class="form-control" type="text" value="customer" name="customer">
                     </div>
                     <div class="form-group">
-                        <textarea class="form-control" id="summary-ckeditor" name="text"></textarea>
+                        <textarea class="form-control" id="summary-ckeditor" name="description"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="image">Image:</label>

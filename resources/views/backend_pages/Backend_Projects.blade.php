@@ -22,7 +22,7 @@
                             <tr>
                                 <td>{{$project->id}}</td>
                                 <td>{{$project->title}}</td>
-                                <td><a class="btn btn-primary" href="{{ route('project.show', $project->id) }}"><i
+                                <td><a class="btn btn-primary" href="{{ route('projects.show', $project->id) }}"><i
                                             class="fas fa-info-circle"></i> Details</a></td>
                                 <td><a href="{{ route('projects.edit', $project->id) }}" class="btn btn-success"><i
                                             class="fas fa-edit"></i> Edit</a></td>

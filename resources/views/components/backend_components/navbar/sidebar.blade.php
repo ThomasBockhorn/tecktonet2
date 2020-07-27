@@ -19,7 +19,7 @@
                  <li> <a class="waves-effect waves-dark" href="/projects" aria-expanded="false"><i
                              class="mdi mdi-emoticon"></i><span class="hide-menu">Projects</span></a>
                  </li>
-                 <li> <a class="waves-effect waves-dark" href="map-google.html" aria-expanded="false"><i
+                 <li> <a class="waves-effect waves-dark" href="/projects/create" aria-expanded="false"><i
                              class="mdi mdi-earth"></i><span class="hide-menu">Create A Project</span></a>
                  </li>
                  <li> <a class="waves-effect waves-dark" href="pages-blank.html" aria-expanded="false"><i

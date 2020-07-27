@@ -27,7 +27,8 @@ class BackEndProjectsController extends Controller
      */
     public function create()
     {
-        //
+        $title = 'Create A Project';
+        return view('backend_pages/Backend_Projects_form', compact('title'));
     }
 
     /**

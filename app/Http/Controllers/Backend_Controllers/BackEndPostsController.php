@@ -29,7 +29,7 @@ class BackEndPostsController extends Controller
     {
         $title = 'Blog';
         $posts = BlogPost::orderBy('id', 'desc')->paginate(6);
-        return view('backend_pages/Backend_Posts', compact('title'))->with('Blog_Posts', $posts);
+        return view('backend_pages/Posts/Backend_Posts', compact('title'))->with('Blog_Posts', $posts);
     }
 
     /**
@@ -40,7 +40,7 @@ class BackEndPostsController extends Controller
     public function create()
     {
         $title = 'Create A Post';
-        return view('backend_pages/Backend_Post_form', compact('title'));
+        return view('backend_pages/Posts/Backend_Post_form', compact('title'));
     }
 
     /**
@@ -89,7 +89,7 @@ class BackEndPostsController extends Controller
         //Get the Image object of that id
         $image = Image::findOrFail($image_id->id);
 
-        return view('backend_pages/Backend_Post_Show', compact('title'))
+        return view('backend_pages/Posts/Backend_Post_Show', compact('title'))
             ->with('Blog_Post', $post)   //blog info
             ->with('Image', $image);     //image data
     }
@@ -104,7 +104,7 @@ class BackEndPostsController extends Controller
     {
         $post = BlogPost::findOrFail($id);
         $title = 'Edit';
-        return view('backend_pages/Backend_Post_edit', compact('title'))->with('Blog_Post', $post);
+        return view('backend_pages/Posts/Backend_Post_edit', compact('title'))->with('Blog_Post', $post);
     }
 
     /**

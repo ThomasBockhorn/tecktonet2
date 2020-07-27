@@ -17,7 +17,7 @@ class BackEndProjectsController extends Controller
     {
         $title = 'Projects';
         $project = Project::orderBy('id', 'desc')->paginate(6);
-        return view('backend_pages/Backend_Projects', compact('title'))->with('Projects', $project);
+        return view('backend_pages/Projects/Backend_Projects', compact('title'))->with('Projects', $project);
     }
 
     /**
@@ -28,7 +28,7 @@ class BackEndProjectsController extends Controller
     public function create()
     {
         $title = 'Create A Project';
-        return view('backend_pages/Backend_Projects_form', compact('title'));
+        return view('backend_pages/Projects/Backend_Projects_form', compact('title'));
     }
 
     /**
@@ -77,7 +77,7 @@ class BackEndProjectsController extends Controller
         //Get the Image object of that id
         //$image = Image::findOrFail($image_id->id);
 
-        return view('backend_pages/Backend_Projects_Show', compact('title'))
+        return view('backend_pages/Projects/Backend_Projects_Show', compact('title'))
             ->with('Project', $project);   //blog info
         // ->with('Image', $image);     //image data
     }
@@ -92,7 +92,7 @@ class BackEndProjectsController extends Controller
     {
         $project = Project::findOrFail($id);
         $title = 'Edit';
-        return view('backend_pages/Backend_Projects_edit', compact('title'))->with('Project', $project);
+        return view('backend_pages/Projects/Backend_Projects_edit', compact('title'))->with('Project', $project);
     }
 
     /**

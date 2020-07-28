@@ -26,6 +26,12 @@ class FrontEndProjectsController extends Controller
      */
     public function show($id)
     {
-        //
+        $project = Project::findOrFail($id);
+        $projects = Project::where('id', '<>', $id)->paginate(4);
+        $title = $project->title;
+
+        return view('frontend_pages/SingleProject', compact('title'))
+            ->with('Project', $project)
+            ->with('Projects', $projects);
     }
 }

@@ -82,5 +82,13 @@ class BreadcrumbsServiceProvider extends ServiceProvider
         BreadCrumbs::for('portfolio.index', function (Trail $trail) {
             $trail->push('Portfolio', route('portfolio.index'));
         });
+
+        //This creates the home link of projects
+        Breadcrumbs::for('portfolio.show', function (Trail $trail,  $id) {
+            $project = Project::findOrFail($id);
+            $trail
+                ->parent('portfolio.index', route('portfolio.index'))
+                ->push($project->title);
+        });
     }
 }

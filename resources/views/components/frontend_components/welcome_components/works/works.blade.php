@@ -27,13 +27,15 @@
         </div>
         <div class="row">
             <div class="isotop-active">
+
+                @foreach($Projects as $key => $project)
                 <div class="col-md-4 col-sm-4 col-xs-12 print identity">
                     <!-- Single Works -->
                     <div class="single-work">
                         <img src="img/pf1.jpg" alt="">
                         <div class="works-hover">
                             <a href="portfolio-single.html">
-                                <h4>Project Name</h4>
+                                <h4>{{$project->title}}</h4>
                             </a>
                             <a class="link popup" href="img/pf1.jpg"><i class="fa fa-picture-o"
                                     aria-hidden="true"></i></a>
@@ -42,81 +44,8 @@
                     </div>
                     <!--/ End Single Works -->
                 </div>
-                <div class="col-md-4 col-sm-4 col-xs-12 wordpress branding">
-                    <!-- Single Works -->
-                    <div class="single-work">
-                        <img src="img/pf2.jpg" alt="">
-                        <div class="works-hover">
-                            <a href="portfolio-single.html">
-                                <h4>Project Name</h4>
-                            </a>
-                            <a class="link popup" href="img/pf2.jpg"><i class="fa fa-picture-o"
-                                    aria-hidden="true"></i></a>
-                            <a href="portfolio-single.html"><i class="fa fa-link" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                    <!--/ End Single Works -->
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-12 web">
-                    <!-- Single Works -->
-                    <div class="single-work">
-                        <img src="img/pf3.jpg" alt="">
-                        <div class="works-hover">
-                            <a href="portfolio-single.html">
-                                <h4>Project Name</h4>
-                            </a>
-                            <a class="link popup" href="img/pf3.jpg"><i class="fa fa-picture-o"
-                                    aria-hidden="true"></i></a>
-                            <a href="portfolio-single.html"><i class="fa fa-link" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                    <!--/ End Single Works -->
-                </div>
-                <div class="col-md-4  col-sm-4 col-xs-12 wordpress">
-                    <!-- Single Works -->
-                    <div class="single-work">
-                        <img src="img/pf4.jpg" alt="#">
-                        <div class="works-hover">
-                            <a href="portfolio-single.html">
-                                <h4>Project Name</h4>
-                            </a>
-                            <a class="link popup" href="img/pf4.jpg"><i class="fa fa-picture-o"
-                                    aria-hidden="true"></i></a>
-                            <a href="portfolio-single.html"><i class="fa fa-link" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                    <!--/ End Single Works -->
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-12 branding">
-                    <!-- Single Works -->
-                    <div class="single-work">
-                        <img src="img/pf5.jpg" alt="#">
-                        <div class="works-hover">
-                            <a href="portfolio-single.html">
-                                <h4>Project Name</h4>
-                            </a>
-                            <a class="link popup" href="img/pf5.jpg"><i class="fa fa-picture-o"
-                                    aria-hidden="true"></i></a>
-                            <a href="portfolio-single.html"><i class="fa fa-link" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                    <!--/ End Single Works -->
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-12 web print">
-                    <!-- Single Works -->
-                    <div class="single-work">
-                        <img src="img/pf6.jpg" alt="#">
-                        <div class="works-hover">
-                            <a href="portfolio-single.html">
-                                <h4>Project Name</h4>
-                            </a>
-                            <a class="link popup" href="img/pf6.jpg"><i class="fa fa-picture-o"
-                                    aria-hidden="true"></i></a>
-                            <a href="portfolio-single.html"><i class="fa fa-link" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                    <!--/ End Single Works -->
-                </div>
+                @endforeach
+
             </div>
         </div>
         <div class="row">

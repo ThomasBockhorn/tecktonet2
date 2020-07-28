@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\BlogPost;
 use App\Image;
+use App\Project;
 
 class WelcomeController extends Controller
 {
@@ -18,9 +19,11 @@ class WelcomeController extends Controller
     {
         $posts = BlogPost::orderBy('id', 'desc')->paginate(3);
         $images = Image::orderBy('id', 'desc')->paginate(3);
+        $projects = Project::orderBy('id', 'desc')->paginate(6);
 
         return view('frontend_pages/welcome')
             ->with('Blog_Posts', $posts)
-            ->with('Images', $images);
+            ->with('Images', $images)
+            ->with('Projects', $projects);
     }
 }

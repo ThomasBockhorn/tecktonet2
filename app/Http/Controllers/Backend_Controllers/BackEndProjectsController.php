@@ -124,7 +124,7 @@ class BackEndProjectsController extends Controller
             'description' => 'required'
         ]);
 
-        $project =  Project::findOrFail($id);
+        $project = Project::findOrFail($id);
         $project->title = $request->title;
         $project->customer = $request->customer;
         $project->description = $request->description;

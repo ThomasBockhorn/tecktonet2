@@ -10,7 +10,9 @@
                 <date>{{ $Project->created_at->format('d-m-Y') }}
                     <date>
                         <br>
-
+                        <img src="{{ asset('storage/'.$ProjectImage->image) }}" alt="{{ $ProjectImage->image }}"
+                            class="img-thumbnail">
+                        <hr>
                         <hr>
                         <div>
                             {!! $Project->description !!}

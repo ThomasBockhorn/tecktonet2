@@ -47,12 +47,12 @@ class ProjectImageController extends Controller
         ]);
 
         //find the image_id, returns a integer
-        $image_id = DB::table('project_images')->where('post_id', '=', $project_id)->first();
+        $image_id = DB::table('project_images')->where('project_id', '=', $project_id)->first();
 
         //Get the Image object of that id
         $image = ProjectImage::findOrFail($image_id->id);
 
-        if ($request->hasFile('image')) {
+        if ($request->hasFile('project_images')) {
             $image->image = $request->file('image')->store('image', 'public');
             $image->project_id = $project_id;
             $image->save();
@@ -65,10 +65,10 @@ class ProjectImageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($project_id)
+    public function delete($project_id)
     {
         //find the image_id, returns a integer
-        $image_id = DB::table('images')->where('post_id', '=', $project_id)->first();
+        $image_id = DB::table('project_images')->where('project_id', '=', $project_id)->first();
 
         //Get the Image object of that id
         $image = ProjectImage::findOrFail($image_id->id);

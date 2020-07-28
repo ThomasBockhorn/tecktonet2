@@ -4,10 +4,24 @@ namespace App\Http\Controllers\Backend_Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Backend_Controllers\ProjectImageController;
 use App\Project;
+use App\ProjectImage;
+use Illuminate\Support\Facades\DB;
 
 class BackEndProjectsController extends Controller
 {
+
+    /**
+     * access to ProjectImage class
+     */
+    private $image;
+
+    public function __construct()
+    {
+        $this->image = new ProjectImageController;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -52,7 +66,7 @@ class BackEndProjectsController extends Controller
 
         if ($project->save()) {
             //Adds file name to database
-            //$this->image->store($request, $post->id);
+            $this->image->store($request, $project->id);
 
             return redirect()->route('projects.index');
         } else {
@@ -72,14 +86,14 @@ class BackEndProjectsController extends Controller
         $title = $project->title;
 
         //Getting image from database
-        //$image_id = DB::table('images')->where('post_id', '=', $id)->first();
+        $image_id = DB::table('project_images')->where('project_id', '=', $id)->first();
 
         //Get the Image object of that id
-        //$image = Image::findOrFail($image_id->id);
+        $projectimage = ProjectImage::findOrFail($image_id->id);
 
         return view('backend_pages/Projects/Backend_Projects_Show', compact('title'))
-            ->with('Project', $project);   //blog info
-        // ->with('Image', $image);     //image data
+            ->with('Project', $project)   //project info
+            ->with('ProjectImage', $projectimage);     //image data
     }
 
     /**
@@ -117,8 +131,8 @@ class BackEndProjectsController extends Controller
 
         if ($project->update()) {
             //updates file name to database
-            //$this->image->delete($project->id);
-            //$this->image->store($request, $project->id);
+            $this->image->delete($project->id);
+            $this->image->store($request, $project->id);
 
             return redirect()->route('projects.index');
         } else {
@@ -137,7 +151,7 @@ class BackEndProjectsController extends Controller
         $project = Project::findOrFail($id);
 
         //deletes file name to database
-        //$this->image->delete($post->id);
+        $this->image->delete($project->id);
 
         $project->delete();
 

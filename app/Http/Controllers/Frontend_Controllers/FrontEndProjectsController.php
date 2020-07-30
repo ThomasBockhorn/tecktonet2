@@ -27,6 +27,8 @@ class FrontEndProjectsController extends Controller
     public function show($id)
     {
         $project = Project::findOrFail($id);
+        $title = $project->title;
+
         $projects = Project::where('id', '<>', $id)->paginate(4);
         $title = $project->title;
 

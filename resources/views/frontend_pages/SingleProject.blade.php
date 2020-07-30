@@ -11,7 +11,7 @@
                     <!--Single pf -->
                     <div class="single-news">
                         <div class="news-head">
-                            <img src="img/single-pf1.jpg" alt="#">
+                            <img src="{{ asset('storage/'.$ProjectImage->image) }}" alt="#">
                         </div>
                         <div class="news-body">
                             <h2>{{ $Project->title }}</h2>
@@ -30,7 +30,7 @@
                     @foreach($Projects as $key => $project)
                     <div class="single-news">
                         <div class="news-head">
-                            <img src="img/single-pf2.jpg" alt="#">
+                            <img src="{{ asset('storage/'. $ProjectImages[$key]->image) }}" alt="#">
                         </div>
                         <div class="news-body">
                             <h2>{{$project->title}}</h2>

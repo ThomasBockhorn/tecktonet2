@@ -37,8 +37,8 @@
                             <a href="{{ route('portfolio.show', $project->id) }}">
                                 <h4>{{$project->title}}</h4>
                             </a>
-                            <a class="link popup" href="img/pf1.jpg"><i class="fa fa-picture-o"
-                                    aria-hidden="true"></i></a>
+                            <a class="link popup" href="{{ asset('storage/'. $ProjectImages[$key]->image) }}"><i
+                                    class="far fa-images" aria-hidden="true"></i></a>
                             <a href="{{ route('portfolio.show', $project->id) }}"><i class="fa fa-link"
                                     aria-hidden="true"></i></a>
                         </div>

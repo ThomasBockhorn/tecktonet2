@@ -17,7 +17,10 @@ class FrontEndProjectsController extends Controller
     public function index()
     {
         $projects = Project::orderBy('id', 'desc')->paginate(6);
-        return view('frontend_pages/Projects')->with('Projects', $projects);
+        $images = ProjectImage::orderBy('id', 'desc')->paginate(6);
+        return view('frontend_pages/Projects')
+            ->with('Projects', $projects)
+            ->with('ProjectImages', $images);
     }
 
     /**

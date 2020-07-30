@@ -15,4 +15,10 @@ class Project extends Model
     {
         $this->belongsTo(ProjectImage::class);
     }
+
+    //This sets up the one to many relationship to categories
+    public function Category()
+    {
+        $this->hasMany(Category::class);
+    }
 }

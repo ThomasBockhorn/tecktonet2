@@ -19,6 +19,6 @@ class Project extends Model
     //This sets up the one to many relationship to categories
     public function Category()
     {
-        $this->hasMany(Category::class);
+        $this->hasOne(Category::class);
     }
 }

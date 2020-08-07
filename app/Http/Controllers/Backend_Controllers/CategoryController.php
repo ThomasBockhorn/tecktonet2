@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Backend_Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Category;
+use App\Project;
 
 class CategoryController extends Controller
 {
@@ -14,7 +16,12 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        $title = 'Project Categories';
+
+        $categories = Category::orderBy('id', 'desc')->paginate(6);
+
+        return view('backend_pages/Categories/Backend_Categories', compact('title'))
+            ->with('Categories', $categories);
     }
 
     /**

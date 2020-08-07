@@ -24,6 +24,7 @@ Route::group(['middleware' => ['rules']], function () {
         $trail->push('home', route('home'));
     });
     Route::resource('/projects', 'Backend_Controllers\BackEndProjectsController');
+    Route::resource('/project/categories', 'Backend_Controllers\CategoryController');
 });
 
 //Route for front end part of the application

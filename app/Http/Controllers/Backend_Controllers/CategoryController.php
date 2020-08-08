@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Backend_Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Category;
-use App\Project;
 
 class CategoryController extends Controller
 {
@@ -31,7 +30,8 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        $title = 'Create New Category';
+        return view('backend_pages/Categories/Backend_Categories_form', compact('title'));
     }
 
     /**
@@ -42,18 +42,20 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $this->validate($request, [
+            'category' => 'required',
+            'project_id' => 'nullable'
+        ]);
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+        $category = new Category;
+        $category->category = $request->category;
+
+        if ($category->save()) {
+
+            return redirect()->route('categories.index');
+        } else {
+            return redirect()->route('category.create');
+        }
     }
 
     /**
@@ -64,7 +66,12 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $title = 'Edit a Category';
+
+        $category = Category::findOrFail($id);
+
+        return view('backend_pages/Categories/Backend_Categories_edit', compact('title'))
+            ->with('Category', $category);
     }
 
     /**
@@ -76,7 +83,19 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'category' => 'required',
+            'project_id' => 'nullable'
+        ]);
+
+        $category = Category::findOrFail($id);
+        $category->category = $request->category;
+
+        if ($category->update()) {
+            return redirect()->route('categories.index');
+        } else {
+            return redirect()->route('categories.edit');
+        }
     }
 
     /**

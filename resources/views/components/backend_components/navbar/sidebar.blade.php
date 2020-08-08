@@ -25,8 +25,8 @@
                  <li> <a class="waves-effect waves-dark" href="/project/categories" aria-expanded="false"><i
                              class="mdi mdi-book-open-variant"></i><span class="hide-menu">Project Categories</span></a>
                  </li>
-                 <li> <a class="waves-effect waves-dark" href="pages-error-404.html" aria-expanded="false"><i
-                             class="mdi mdi-help-circle"></i><span class="hide-menu">Subscription List</span></a>
+                 <li> <a class="waves-effect waves-dark" href="/project/categories/create" aria-expanded="false"><i
+                             class="mdi mdi-help-circle"></i><span class="hide-menu">Create A Category</span></a>
                  </li>
                  <li> <a class="waves-effect waves-dark" href="pages-error-404.html" aria-expanded="false"><i
                              class="mdi mdi-help-circle"></i><span class="hide-menu">Inquiry List</span></a>

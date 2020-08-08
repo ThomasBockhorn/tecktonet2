@@ -23,10 +23,10 @@
                              class="fas fa-folder-plus"></i><span class="hide-menu">Create A Project</span></a>
                  </li>
                  <li> <a class="waves-effect waves-dark" href="/project/categories" aria-expanded="false"><i
-                             class="mdi mdi-book-open-variant"></i><span class="hide-menu">Project Categories</span></a>
+                             class="far fa-file"></i><span class="hide-menu">Project Categories</span></a>
                  </li>
                  <li> <a class="waves-effect waves-dark" href="/project/categories/create" aria-expanded="false"><i
-                             class="mdi mdi-help-circle"></i><span class="hide-menu">Create A Category</span></a>
+                             class="far fa-folder-open"></i><span class="hide-menu">Create A Category</span></a>
                  </li>
                  <li> <a class="waves-effect waves-dark" href="pages-error-404.html" aria-expanded="false"><i
                              class="mdi mdi-help-circle"></i><span class="hide-menu">Inquiry List</span></a>

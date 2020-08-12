@@ -8,6 +8,7 @@ use App\Http\Controllers\Backend_Controllers\ProjectImageController;
 use App\Project;
 use App\ProjectImage;
 use Illuminate\Support\Facades\DB;
+use App\Category;
 
 class BackEndProjectsController extends Controller
 {
@@ -91,9 +92,13 @@ class BackEndProjectsController extends Controller
         //Get the Image object of that id
         $projectimage = ProjectImage::findOrFail($image_id->id);
 
+        //Get the project category
+        $projectCategory = DB::table('categories')->where('project_id', '=', $id)->first();
+
         return view('backend_pages/Projects/Backend_Projects_Show', compact('title'))
             ->with('Project', $project)   //project info
-            ->with('ProjectImage', $projectimage);     //image data
+            ->with('ProjectImage', $projectimage)     //image data
+            ->with('ProjectCategory', $projectCategory);  //project category
     }
 
     /**

@@ -9,18 +9,20 @@ use App\Project;
 use App\ProjectImage;
 use Illuminate\Support\Facades\DB;
 use App\Category;
+use App\Http\Controllers\Backend_Controllers\CategoryController;
 
 class BackEndProjectsController extends Controller
 {
-
     /**
-     * access to ProjectImage class
+     * access to ProjectImage/category/categoryRequest class
      */
-    private $image;
+    private $image, $category, $categoryRequest;
+
 
     public function __construct()
     {
         $this->image = new ProjectImageController;
+        $this->category = new CategoryController;
     }
 
     /**
@@ -43,7 +45,12 @@ class BackEndProjectsController extends Controller
     public function create()
     {
         $title = 'Create A Project';
-        return view('backend_pages/Projects/Backend_Projects_form', compact('title'));
+
+        //Gets all the categories
+        $projectCategories = Category::all();
+
+        return view('backend_pages/Projects/Backend_Projects_form', compact('title'))
+            ->with('ProjectCategories', $projectCategories);
     }
 
     /**
@@ -57,7 +64,7 @@ class BackEndProjectsController extends Controller
         $this->validate($request, [
             'title' => 'required|max:255',
             'customer' => 'required',
-            'description' => 'required'
+            'description' => 'required',
         ]);
 
         $project = new Project;
@@ -68,6 +75,9 @@ class BackEndProjectsController extends Controller
         if ($project->save()) {
             //Adds file name to database
             $this->image->store($request, $project->id);
+
+            //This finds the category and saves the project id
+            DB::table('categories')->where('id', $request->category_id)->update(['project_id' => $project->id]);
 
             return redirect()->route('projects.index');
         } else {

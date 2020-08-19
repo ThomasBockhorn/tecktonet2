@@ -18,18 +18,14 @@
                         <textarea class="form-control" id="summary-ckeditor" name="description"></textarea>
                     </div>
                     <div class="form-group">
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Category
-                            </button>
-                            <select class="dropdown-menu" aria-labelledby="dropdownMenuButton" name="category_id">
-                                @foreach($ProjectCategories as $projectCategory)
-                                <option value="{{ $projectCategory->id }}" class="dropdown-item">
-                                    {{ $projectCategory->category }}</option>
-                                @endforeach
-                            </select>
-                        </div>
+                        <label for="category_id">Category</label>
+                        <select class="form-control" aria-labelledby="dropdownMenuButton" name="category_id"
+                            id="category_list">
+                            @foreach($ProjectCategories as $projectCategory)
+                            <option value="{{ $projectCategory->id }}" class="dropdown-item">
+                                {{ $projectCategory->category }}</option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="image">Image:</label>

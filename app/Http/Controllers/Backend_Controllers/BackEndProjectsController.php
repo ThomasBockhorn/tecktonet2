@@ -120,8 +120,15 @@ class BackEndProjectsController extends Controller
     public function edit($id)
     {
         $project = Project::findOrFail($id);
+
+        //Get the project category
+        $projectCategories = Category::all();
+
         $title = 'Edit';
-        return view('backend_pages/Projects/Backend_Projects_edit', compact('title'))->with('Project', $project);
+
+        return view('backend_pages/Projects/Backend_Projects_edit', compact('title'))
+            ->with('Project', $project)
+            ->with('ProjectCategories', $projectCategories);  //project category;
     }
 
     /**
@@ -145,13 +152,18 @@ class BackEndProjectsController extends Controller
         $project->description = $request->description;
 
         if ($project->update()) {
+
             //updates file name to database
             $this->image->delete($project->id);
             $this->image->store($request, $project->id);
 
+            //This finds the category and saves the project id
+            DB::table('categories')->where('project_id', $project->id)->update(['project_id' => null]);
+            DB::table('categories')->where('id', $request->category_id)->update(['project_id' => $project->id]);
+
             return redirect()->route('projects.index');
         } else {
-            return redirect()->route('projects.index')->with('errors', 'something bad happened!');
+            return redirect()->route('projects.edit')->with('errors', 'something bad happened!');
         }
     }
 

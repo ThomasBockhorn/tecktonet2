@@ -15,11 +15,9 @@
                 <div class="works-menu wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
                     <ul>
                         <li class="active" data-filter="*">All Works</li>
-                        <li data-filter=".print">Print</li>
-                        <li data-filter=".identity">Identity</li>
-                        <li data-filter=".branding">Branding</li>
-                        <li data-filter=".web">Web</li>
-                        <li data-filter=".wordpress">Wordpress</li>
+                        @foreach($ProjectCategories as $projectCategory)
+                        <li data-filter=".{{$projectCategory->category}}">{{$projectCategory->category}}</li>
+                        @endforeach
                     </ul>
                 </div>
                 <!--/ End Project Nav -->
@@ -29,7 +27,7 @@
             <div class="isotop-active">
 
                 @foreach($Projects as $key => $project)
-                <div class="col-md-4 col-sm-4 col-xs-12 print identity">
+                <div class="col-md-4 col-sm-4 col-xs-12 {{ $project->category }}">
                     <!-- Single Works -->
                     <div class="single-work">
                         <img src="{{ asset('storage/'. $ProjectImages[$key]->image) }}" alt="">

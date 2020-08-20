@@ -65,19 +65,21 @@ class BackEndProjectsController extends Controller
             'title' => 'required|max:255',
             'customer' => 'required',
             'description' => 'required',
+            'category' => 'max:255'
         ]);
 
         $project = new Project;
         $project->title = $request->title;
         $project->customer = $request->customer;
         $project->description = $request->description;
+        $project->category = $request->category;
 
         if ($project->save()) {
             //Adds file name to database
             $this->image->store($request, $project->id);
 
             //This finds the category and saves the project id
-            DB::table('categories')->where('id', $request->category_id)->update(['project_id' => $project->id]);
+            // DB::table('categories')->where('id', $request->category_id)->update(['project_id' => $project->id]);
 
             return redirect()->route('projects.index');
         } else {
@@ -143,13 +145,15 @@ class BackEndProjectsController extends Controller
         $this->validate($request, [
             'title' => 'required|max:255',
             'customer' => 'required',
-            'description' => 'required'
+            'description' => 'required',
+            'category' => 'max:255'
         ]);
 
         $project = Project::findOrFail($id);
         $project->title = $request->title;
         $project->customer = $request->customer;
         $project->description = $request->description;
+        $project->category = $request->category;
 
         if ($project->update()) {
 
@@ -158,8 +162,8 @@ class BackEndProjectsController extends Controller
             $this->image->store($request, $project->id);
 
             //This finds the category and saves the project id
-            DB::table('categories')->where('project_id', $project->id)->update(['project_id' => null]);
-            DB::table('categories')->where('id', $request->category_id)->update(['project_id' => $project->id]);
+            //DB::table('categories')->where('project_id', $project->id)->update(['project_id' => null]);
+            // DB::table('categories')->where('id', $request->category_id)->update(['project_id' => $project->id]);
 
             return redirect()->route('projects.index');
         } else {

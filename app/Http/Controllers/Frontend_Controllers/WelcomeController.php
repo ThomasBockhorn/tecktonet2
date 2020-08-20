@@ -8,6 +8,7 @@ use App\BlogPost;
 use App\Image;
 use App\Project;
 use App\ProjectImage;
+use App\Category;
 
 class WelcomeController extends Controller
 {
@@ -22,11 +23,13 @@ class WelcomeController extends Controller
         $images = Image::orderBy('id', 'desc')->paginate(3);
         $projects = Project::orderBy('id', 'desc')->paginate(6);
         $projectImages = ProjectImage::orderBy('id', 'desc')->paginate(6);
+        $projectCategories = Category::all();
 
         return view('frontend_pages/welcome')
             ->with('Blog_Posts', $posts)
             ->with('Images', $images)
             ->with('Projects', $projects)
-            ->with('ProjectImages', $projectImages);
+            ->with('ProjectImages', $projectImages)
+            ->with('ProjectCategories', $projectCategories);
     }
 }

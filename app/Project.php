@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Project extends Model
 {
     protected $fillable = [
-        'title', 'description', 'customer', 'rating'
+        'title', 'description', 'customer', 'rating', 'category'
     ];
 
     //This sets up the one to one relationship with ProjectImage

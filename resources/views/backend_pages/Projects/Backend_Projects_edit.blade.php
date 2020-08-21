@@ -23,6 +23,8 @@
                     </div>
                     <div class="form-group">
                         <label for="category_id">Category</label>
+                        <br>
+                        <label for="category_id">Current: {{$Project->category}}</label>
                         <select class="form-control" aria-labelledby="dropdownMenuButton" name="category"
                             id="category_list">
                             @foreach($ProjectCategories as $projectCategory)

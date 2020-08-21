@@ -5,11 +5,11 @@
     <div class="col-12">
         <div class="card">
             <div class="card-block">
-                <h3>{{ $Project->title }}</h3>
-                <h6>{{ $Project->customer }}</h6>
                 <date>{{ $Project->created_at->format('d-m-Y') }}</date>
+                <h3 class="mt-4">{{ $Project->title }}</h3>
+                <h6>{{ $Project->customer }}</h6>
                 <h6>Category: <span>
-                        {{ !empty($ProjectCategory->category) ? $ProjectCategory->category: ''}}
+                        {{ $Project->category}}
                     </span></h6>
                 <br>
                 <img src="{{ asset('storage/'.$ProjectImage->image) }}" alt="{{ $ProjectImage->image }}"

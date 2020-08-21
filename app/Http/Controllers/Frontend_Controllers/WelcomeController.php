@@ -25,11 +25,15 @@ class WelcomeController extends Controller
         $projectImages = ProjectImage::orderBy('id', 'desc')->paginate(6);
         $projectCategories = Category::all();
 
+        //Gets the data for fun fact
+        $projectCount = Project::all()->count();
+
         return view('frontend_pages/welcome')
             ->with('Blog_Posts', $posts)
             ->with('Images', $images)
             ->with('Projects', $projects)
             ->with('ProjectImages', $projectImages)
-            ->with('ProjectCategories', $projectCategories);
+            ->with('ProjectCategories', $projectCategories)
+            ->with('ProjectCount', $projectCount);
     }
 }

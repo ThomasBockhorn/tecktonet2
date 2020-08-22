@@ -54,7 +54,7 @@
 		                                <input type="email" name="email" placeholder="Enter your email">
 		                                <button type="submit" class="button">Subscribe</button>
 		                                <i class="fa fa-lock" class="icon"></i>
-		                                <p>Your email address is 100% safe to us</p>
+		                                <p>Your email address is 100% safe</p>
 		                            </form>
 		                        </div>
 		                    </div>

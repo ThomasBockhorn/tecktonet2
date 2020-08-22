@@ -1,8 +1,7 @@
 		<!-- Footer Area -->
 		<footer id="footer" class="footer section">
 		    <!-- Footer Top -->
-		    <div class="footer-top bg-info">
-		        <!--bg-info until upper customer section is completed-->
+		    <div class="footer-top" style="background-color: white;">
 		        <div class="container">
 		            <div class="row">
 		                <div class="col-md-3 col-sm-3 col-xs-12">

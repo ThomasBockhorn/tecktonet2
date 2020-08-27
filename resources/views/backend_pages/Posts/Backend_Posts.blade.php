@@ -38,6 +38,7 @@
                             @endforeach
                         </tbody>
                     </table>
+                    {{$Blog_Posts->links()}}
                 </div>
             </div>
         </div>

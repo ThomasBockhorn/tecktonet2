@@ -49,8 +49,8 @@
                     <!--/ End Single Works -->
                 </div>
                 @endforeach
-
             </div>
+            {{$Projects->links()}}
         </div>
     </div>
 </section>

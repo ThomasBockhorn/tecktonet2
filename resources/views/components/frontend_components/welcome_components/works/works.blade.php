@@ -47,16 +47,6 @@
 
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="button-head">
-                    <div class="button">
-                        <span></span>
-                        <a href="/portfolio" class="btn">Load More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </section>
 <!--/ End Works Area -->

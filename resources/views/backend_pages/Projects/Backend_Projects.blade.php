@@ -38,6 +38,7 @@
                             @endforeach
                         </tbody>
                     </table>
+                    {{$Projects->links()}}
                 </div>
             </div>
         </div>

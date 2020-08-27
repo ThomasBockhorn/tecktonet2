@@ -29,7 +29,7 @@
                              class="far fa-folder-open"></i><span class="hide-menu">Create A Category</span></a>
                  </li>
                  <li> <a class="waves-effect waves-dark" href="/subscription/" aria-expanded="false"><i
-                             class="mdi mdi-help-circle"></i><span class="hide-menu">Inquiry List</span></a>
+                             class="fas fa-at"></i><span class="hide-menu">Subscription List</span></a>
                  </li>
              </ul>
          </nav>
@@ -38,7 +38,9 @@
      <!-- End Sidebar scroll-->
      <!-- Bottom points-->
      <div class="sidebar-footer">
+         <!--Need to add this-->
          <!-- item--><a href="" class="link" data-toggle="tooltip" title="Settings"><i class="fas fa-cogs"></i></a>
+         <!--eventually create an business email on website-->
          <!-- item--><a href="https://www.gmail.com" class="link" data-toggle="tooltip" title="Email"><i
                  class="fas fa-inbox"></i></a>
          <a class="link" data-toggle="tooltip" title="Logout" href="{{ route('logout') }}" onclick="event.preventDefault();

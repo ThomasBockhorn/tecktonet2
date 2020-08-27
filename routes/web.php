@@ -3,6 +3,7 @@
 use Tabuna\Breadcrumbs\Trail;
 use Illuminate\Support\Facades\Route;
 use Spatie\Honeypot\ProtectAgainstSpam;
+use Illuminate\Support\Facades\Auth;
 
 
 
@@ -18,14 +19,16 @@ use Spatie\Honeypot\ProtectAgainstSpam;
 */
 
 //Backend routes
-Route::group(['middleware' => ['rules']], function () {
+Route::group(['middleware' => ['rules', 'admin']], function () {
     Route::resource('/posts', 'Backend_Controllers\BackEndPostsController');
-    Route::get('/home', 'Backend_Controllers\HomeController@index')->name('home')->breadcrumbs(function (Trail $trail) {
-        $trail->push('home', route('home'));
-    });
     Route::resource('/projects', 'Backend_Controllers\BackEndProjectsController');
     Route::resource('/project/categories', 'Backend_Controllers\CategoryController')->except(['show']);
     Route::resource('/subscription', 'Backend_Controllers\SubscriptionListController')->except(['create', 'store', 'update', 'edit', 'show']);
+});
+
+//Backend homepage
+Route::get('/home', 'Backend_Controllers\HomeController@index')->name('home')->breadcrumbs(function (Trail $trail) {
+    $trail->push('home', route('home'));
 });
 
 //Route for front end part of the application

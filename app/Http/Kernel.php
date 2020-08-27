@@ -47,7 +47,13 @@ class Kernel extends HttpKernel
         'rules' => [
             \Spatie\Honeypot\ProtectAgainstSpam::class,
             \App\Http\Middleware\Authenticate::class,
-            \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class
+            \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
+
+        ],
+
+        'admin' => [
+            \App\Http\Middleware\CheckRole::class
+
         ]
     ];
 

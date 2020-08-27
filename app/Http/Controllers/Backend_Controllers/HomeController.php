@@ -26,7 +26,7 @@ class HomeController extends Controller
     {
         //adds title to breadcrumb
         $title = "Dashboard";
-        
+
         return view('backend_pages/home', compact('title'));
     }
 }

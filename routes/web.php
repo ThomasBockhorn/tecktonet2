@@ -25,6 +25,7 @@ Route::group(['middleware' => ['rules']], function () {
     });
     Route::resource('/projects', 'Backend_Controllers\BackEndProjectsController');
     Route::resource('/project/categories', 'Backend_Controllers\CategoryController')->except(['show']);
+    Route::resource('/subscription', 'Backend_Controllers\SubscriptionListController')->except(['create', 'store', 'update', 'edit', 'show']);
 });
 
 //Route for front end part of the application

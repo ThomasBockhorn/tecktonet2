@@ -28,7 +28,7 @@
                  <li> <a class="waves-effect waves-dark" href="/project/categories/create" aria-expanded="false"><i
                              class="far fa-folder-open"></i><span class="hide-menu">Create A Category</span></a>
                  </li>
-                 <li> <a class="waves-effect waves-dark" href="pages-error-404.html" aria-expanded="false"><i
+                 <li> <a class="waves-effect waves-dark" href="/subscription/" aria-expanded="false"><i
                              class="mdi mdi-help-circle"></i><span class="hide-menu">Inquiry List</span></a>
                  </li>
              </ul>

@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Project;
 use App\ProjectImage;
 use Illuminate\Support\Facades\DB;
+use App\Category;
+
 
 class FrontEndProjectsController extends Controller
 {
@@ -18,9 +20,12 @@ class FrontEndProjectsController extends Controller
     {
         $projects = Project::orderBy('id', 'desc')->paginate(6);
         $images = ProjectImage::orderBy('id', 'desc')->paginate(6);
+        $projectCategories = Category::all();
+
         return view('frontend_pages/Projects')
             ->with('Projects', $projects)
-            ->with('ProjectImages', $images);
+            ->with('ProjectImages', $images)
+            ->with('ProjectCategories', $projectCategories);
     }
 
     /**

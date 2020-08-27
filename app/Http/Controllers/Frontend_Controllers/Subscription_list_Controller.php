@@ -12,7 +12,7 @@ class Subscription_list_Controller extends Controller
     public function saveSubscriptionList(Request $request)
     {
         $this->validate($request, [
-            'email' => 'required|email'
+            'email' => 'required|email|unique:subscription_lists,email'
         ]);
 
         //saves to the database

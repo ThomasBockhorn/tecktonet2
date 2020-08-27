@@ -26,23 +26,9 @@
             </div>
             @endforeach
 
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="pagination-head">
-                    <div class="pagination">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>prev</a></li>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li><a href="#">next<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
 
         </div>
+        {{$Blog_Posts->links()}}
     </div>
 </section>
 <!--/ End Newslatter -->

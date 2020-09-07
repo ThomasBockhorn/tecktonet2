@@ -14,7 +14,7 @@
                 <!-- Single Team -->
                 <div class="single-team">
                     <div class="team-head">
-                        <img src="img/ThomasBockhorn.jpg" alt="">
+                        <img src="{{asset('/img/ThomasBockhorn.jpg')}}" alt="">
                         <div class="team-hover">
                             <ul class="social">
                                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>

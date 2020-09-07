@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-md-6 col-sm-12 col-xs-12 wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay="0.9s">
                 <div class="feature-left">
-                    <img src="{{asset('../img/computer.jpg')}}" alt="#">
+                    <img src="{{asset('/img/computer.jpg')}}" alt="#">
                 </div>
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12 wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.9s">

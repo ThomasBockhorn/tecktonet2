@@ -38,7 +38,7 @@ Route::get('/', 'Frontend_Controllers\WelcomeController@index');
 Route::resource('/blog', 'Frontend_Controllers\FrontEndPostsController')->except(['create', 'update', 'store', 'destroy', 'edit']);
 
 //Route for frontend projects
-Route::resource('/portfolio', 'Frontend_Controllers\FrontendProjectsController')->except(['create', 'update', 'store', 'destroy', 'edit']);
+Route::resource('/portfolio', 'Frontend_Controllers\FrontEndProjectsController')->except(['create', 'update', 'store', 'destroy', 'edit']);
 
 //Contact route and addeds an Antispam protection from Honeypot
 Route::post('/contact', 'Frontend_Controllers\ContactController@saveContact')->middleware(ProtectAgainstSpam::class);

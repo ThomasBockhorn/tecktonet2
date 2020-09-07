@@ -30,12 +30,12 @@
                 <div class="col-md-4 col-sm-4 col-xs-12 {{ $project->category }}">
                     <!-- Single Works -->
                     <div class="single-work">
-                        <img src="{{ asset('../storage/'. $ProjectImages[$key]->image) }}" alt="">
+                        <img src="{{ asset('storage/'. $ProjectImages[$key]->image) }}" alt="">
                         <div class="works-hover">
                             <a href="{{ route('portfolio.show', $project->id) }}">
                                 <h4>{{$project->title}}</h4>
                             </a>
-                            <a class="link popup" href="{{ asset('../storage/'. $ProjectImages[$key]->image) }}"><i
+                            <a class="link popup" href="{{ asset('storage/'. $ProjectImages[$key]->image) }}"><i
                                     class="far fa-images" aria-hidden="true"></i></a>
                             <a href="{{ route('portfolio.show', $project->id) }}"><i class="fa fa-link"
                                     aria-hidden="true"></i></a>

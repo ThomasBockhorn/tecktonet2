@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="single-pf owl-carousel">
-                    <!--Single pf -->
+                    <!--Single pf te-->
                     <div class="single-news">
                         <div class="news-head">
                             <img src="{{ asset('storage/'.$ProjectImage->image) }}" alt="#">

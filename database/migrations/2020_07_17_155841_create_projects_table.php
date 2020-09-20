@@ -19,6 +19,7 @@ class CreateProjectsTable extends Migration
             $table->text('description');
             $table->string('customer');
             $table->integer('rating')->nullable();
+            $table->string('url_link');
             $table->timestamps();
         });
     }

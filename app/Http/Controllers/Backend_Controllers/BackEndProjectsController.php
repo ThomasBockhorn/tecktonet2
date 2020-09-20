@@ -10,6 +10,7 @@ use App\ProjectImage;
 use Illuminate\Support\Facades\DB;
 use App\Category;
 use App\Http\Controllers\Backend_Controllers\CategoryController;
+use Illuminate\Support\Str;
 
 class BackEndProjectsController extends Controller
 {
@@ -65,14 +66,19 @@ class BackEndProjectsController extends Controller
             'title' => 'required|max:255',
             'customer' => 'required',
             'description' => 'required',
-            'category' => 'max:255'
+            'category' => 'max:255',
+            'url_link' => 'required'
         ]);
+
+        //make url lowercase
+        $lowerCaseUrl = Str::lower($request->url_link);
 
         $project = new Project;
         $project->title = $request->title;
         $project->customer = $request->customer;
         $project->description = $request->description;
         $project->category = $request->category;
+        $project->url_link = $lowerCaseUrl;
 
         if ($project->save()) {
             //Adds file name to database
@@ -146,24 +152,25 @@ class BackEndProjectsController extends Controller
             'title' => 'required|max:255',
             'customer' => 'required',
             'description' => 'required',
-            'category' => 'max:255'
+            'category' => 'max:255',
+            'url_link' => 'required'
         ]);
+
+        //make url lowercase
+        $lowerCaseUrl = Str::lower($request->url_link);
 
         $project = Project::findOrFail($id);
         $project->title = $request->title;
         $project->customer = $request->customer;
         $project->description = $request->description;
         $project->category = $request->category;
+        $project->url_link = $lowerCaseUrl;
 
         if ($project->update()) {
 
             //updates file name to database
             $this->image->delete($project->id);
             $this->image->store($request, $project->id);
-
-            //This finds the category and saves the project id
-            //DB::table('categories')->where('project_id', $project->id)->update(['project_id' => null]);
-            // DB::table('categories')->where('id', $request->category_id)->update(['project_id' => $project->id]);
 
             return redirect()->route('projects.index');
         } else {

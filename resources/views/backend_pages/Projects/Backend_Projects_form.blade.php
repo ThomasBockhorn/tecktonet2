@@ -28,6 +28,9 @@
                         </select>
                     </div>
                     <div class="form-group">
+                        <input type="text" class="form-control" value="URL Link" name="url_link">
+                    </div>
+                    <div class="form-group">
                         <label for="image">Image:</label>
                         <input type="file" class="form-control-file" id="image" name="image" required>
                     </div>

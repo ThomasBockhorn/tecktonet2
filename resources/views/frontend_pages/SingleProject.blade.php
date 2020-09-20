@@ -20,9 +20,8 @@
                             <span><i class="fa fa-clock-o" aria-hidden="true"></i>date:
                                 {{$Project->created_at->format('d M Y')}}</span>
                             <span><i class="fa fa-folder-open-o" aria-hidden="true"></i>category: web design</span>
-                            <span><i class="fa fa-folder-o" aria-hidden="true"></i>project url: <a
-                                    href="#">www.twitter.com</a></span>
-                            <a href="#" class="btn">view live<i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                            <a href="{{ $Project->url_link }}" class="btn">view live<i class="fa fa-caret-right"
+                                    aria-hidden="true"></i></a>
                         </div>
                     </div>
                     <!--/ End Single Team -->
@@ -40,8 +39,9 @@
                                 {{$project->created_at->format('d M Y')}}</span>
                             <span><i class="fa fa-folder-open-o" aria-hidden="true"></i>category: branding</span>
                             <span><i class="fa fa-folder-o" aria-hidden="true"></i>project url: <a
-                                    href="#">www.facebook.com</a></span>
-                            <a href="#" class="btn">view live<i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                                    href="{{ $project->url_link }}">{{ $project->url_link }}</a></span>
+                            <a href="{{ $project->url_link }}" class="btn">view live<i class="fa fa-caret-right"
+                                    aria-hidden="true"></i></a>
                         </div>
                     </div>
                     @endforeach

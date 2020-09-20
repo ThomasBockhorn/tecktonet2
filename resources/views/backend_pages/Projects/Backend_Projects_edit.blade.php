@@ -34,6 +34,9 @@
                         </select>
                     </div>
                     <div class="form-group">
+                        <input class="form-control" type="text" value="{{ $Project->url_link }}" name="url_link">
+                    </div>
+                    <div class="form-group">
                         <label for="image">Image:</label>
                         <input type="file" class="form-control-file" id="image" name="image" required>
                     </div>

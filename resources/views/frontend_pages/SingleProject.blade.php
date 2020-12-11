@@ -19,7 +19,8 @@
                             <h5>project details</h5>
                             <span><i class="fa fa-clock-o" aria-hidden="true"></i>date:
                                 {{$Project->created_at->format('d M Y')}}</span>
-                            <span><i class="fa fa-folder-open-o" aria-hidden="true"></i>category: web design</span>
+                            <span><i class="fa fa-folder-o" aria-hidden="true"></i>project url:<a
+                                    href="{{ $Project->url_link }}">{{ $Project->url_link }}</a></span>
                             <a href="{{ $Project->url_link }}" class="btn">view live<i class="fa fa-caret-right"
                                     aria-hidden="true"></i></a>
                         </div>
@@ -37,8 +38,7 @@
                             <h5>project details</h5>
                             <span><i class="fa fa-clock-o" aria-hidden="true"></i>date:
                                 {{$project->created_at->format('d M Y')}}</span>
-                            <span><i class="fa fa-folder-open-o" aria-hidden="true"></i>category: branding</span>
-                            <span><i class="fa fa-folder-o" aria-hidden="true"></i>project url: <a
+                            <span><i class="fa fa-folder-o" aria-hidden="true"></i>project url:<a
                                     href="{{ $project->url_link }}">{{ $project->url_link }}</a></span>
                             <a href="{{ $project->url_link }}" class="btn">view live<i class="fa fa-caret-right"
                                     aria-hidden="true"></i></a>

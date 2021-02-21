@@ -87,11 +87,11 @@ class BackEndPostsController extends Controller
         $image_id = DB::table('images')->where('post_id', '=', $id)->first();
 
         //Get the Image object of that id
-        $image = Image::findOrFail($image_id->id);
-
-        return view('backend_pages/Posts/Backend_Post_Show', compact('title'))
-            ->with('Blog_Post', $post)   //blog info
-            ->with('Image', $image);     //image data
+        if ($image = Image::find($image_id->id)) {
+            return view('backend_pages/Posts/Backend_Post_Show', compact('title'))
+                ->with('Blog_Post', $post)   //blog info
+                ->with('Image', $image);     //image data
+        }
     }
 
     /**

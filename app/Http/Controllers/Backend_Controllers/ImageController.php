@@ -51,13 +51,13 @@ class ImageController extends Controller
         $image_id = DB::table('images')->where('post_id', '=', $post_id)->first();
 
         //Get the Image object of that id
-        $image = Image::findOrFail($image_id->id);
-
-        if ($request->hasFile('image')) {
-            $image->image = $request->file('image')->store('image', 'public');
-            $image->post_id = $post_id;
-            $image->save();
-        }
+        if ($image = Image::findOrFail($image_id->id)) {
+            if ($request->hasFile('image')) {
+                $image->image = $request->file('image')->store('image', 'public');
+                $image->post_id = $post_id;
+                $image->save();
+            }
+        };
     }
 
     /**

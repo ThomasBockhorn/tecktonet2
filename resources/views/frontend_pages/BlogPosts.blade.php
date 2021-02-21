@@ -10,7 +10,9 @@
             <div class="col-md-12 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.4s">
                 <div class="single-news">
                     <div class="news-head">
+                        @if(file_exists('../storage/. $Images[$key]->image.'))
                         <img src="{{ '../storage/'. $Images[$key]->image }}" alt="">
+                        @endif
                     </div>
                     <div class="news-body">
                         <h3 class="date">
